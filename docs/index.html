@@ -13,10 +13,17 @@
   <script>
     window.$docsify = {
       name: '前端知识体系',
-      repo: ''
+      repo: '',
+      loadSidebar: true,
+      search: {
+        placeholder: '搜索',
+        noData: '找不到结果!',
+        depth: 3
+      }
     }
   </script>
   <!-- Docsify v4 -->
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//unpkg.com/docsify-copy-code"></script>
 </body>
 </html>

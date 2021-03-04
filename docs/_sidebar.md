@@ -1,3 +1,3 @@
 <!-- docs/_sidebar.md -->
-* [Home](/)
-* [Guide](guide.md "The greatest guide in the world")
+* 介绍
+    * [JavaScript方法实现](/method/README.md)

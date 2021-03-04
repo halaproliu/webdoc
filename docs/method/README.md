@@ -1,0 +1,16 @@
+# JavaScript方法实现
+
+- [Promise](./method/promise.md)
+- [防抖和节流](./method/debounce.md)
+- [函数柯里化](./method/curry.md)
+- [深拷贝](./method/deepClone.md)
+- [解析url参数](./method/parseUrl.md)
+- [类型判断](./method/type.md)
+- [判断所有值匹配](./method/isAllTrue.md)
+- [字符串去除相邻重复项](./method/unique.md)
+- [call、apply、bind实现](./method/changeThis.md)
+- [中间件实现](./method/middleware.md)
+- [依赖注入](./method/ioc.md)
+- [下载文件](./method/download.md)
+- [异步顺序执行](./method/PromiseExecutor.md)
+- [hash路由实现](./method/hashRouter.md)
