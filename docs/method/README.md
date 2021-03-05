@@ -14,3 +14,4 @@
 - [下载文件](./method/download.md)
 - [异步顺序执行](./method/PromiseExecutor.md)
 - [hash路由实现](./method/hashRouter.md)
+- [Object.create实现](/method/objectCreate.md)
