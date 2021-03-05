@@ -4,6 +4,7 @@
 - [防抖和节流](./method/debounce.md)
 - [函数柯里化](./method/curry.md)
 - [深拷贝](./method/deepClone.md)
+- [实现无限累加函数](/method/add.md)
 - [解析url参数](./method/parseUrl.md)
 - [类型判断](./method/type.md)
 - [判断所有值匹配](./method/isAllTrue.md)

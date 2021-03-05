@@ -8,6 +8,7 @@
 - [css实现文本行的斑马条纹](./css/css实现文本行的斑马条纹.md)
 - [css实现自定义复选框](./css/css实现自定义复选框.md)
 - [css实现轮播图](./css/css实现轮播图.md)
+- [css实现自适应正方形](./css/adaptiveSquare.md)
 - [css权重](./css/css权重.md)
 - [css的垂直格式化](./css/css的垂直格式化.md)
 - [css的水平格式化](./css/css的水平格式化.md)
