@@ -13,7 +13,7 @@
 - [依赖注入](./method/ioc.md)
 - [下载文件](./method/download.md)
 - [异步顺序执行](./method/PromiseExecutor.md)
-- [ajax轮询封装]](./method/poll.md)
+- [ajax轮询封装]s(./method/poll.md)
 - [hash路由实现](./method/hashRouter.md)
 - [Object.create实现](/method/objectCreate.md)
 - [前序、中序、后序遍历](/method/traversal.md)
