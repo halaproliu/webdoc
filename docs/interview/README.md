@@ -5,6 +5,8 @@
 - [从一道前端面试题洞察面试玄机，以及编程基础的灵活应用](https://zhuanlan.zhihu.com/p/344496476)
 - [腾讯前端面试篇（一）](https://juejin.cn/post/6844903743125733390)
 - [前端面试题——自己实现bind](https://zhuanlan.zhihu.com/p/85438296)
+- [【1 月最新】前端 100 问：能搞懂 80% 的请把简历给我](https://juejin.cn/post/6844903885488783374)
+- [大厂面试题](https://www.kancloud.cn/freya001/interview/1235945)
 - [前端知识库](https://www.html5iq.com/index.html)
 - [2021年前端面试必读文章【超三百篇文章/赠复习导图】](https://juejin.cn/post/6844904116339261447#heading-4)
 - [高级知识点（持续更新）](https://zhuanlan.zhihu.com/p/56490498)

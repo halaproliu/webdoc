@@ -9,4 +9,5 @@
     * [Vue相关](/vue/README.md)
     * [架构相关](/framework/README.md)
     * [性能优化](/performance/README.md)
+    * [算法](algorithm/README.md)
     * [面试题](/interview/README.md)
