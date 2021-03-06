@@ -9,3 +9,5 @@
 - [JavaScript深入之原型链](/javascript/prototype.md)
 - [JavaScript深入之继承](/javascript/extends.md)
 - [JavaScript深入之EventLoop](/javascript/eventLoop.md)
+- [useRequest-蚂蚁中台标准请求 Hooks](https://zhuanlan.zhihu.com/p/106796295)
+- [深入浅出之swr](https://zhuanlan.zhihu.com/p/95089948)

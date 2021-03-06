@@ -8,3 +8,5 @@
     * [JavaScript设计模式](design/README.md)
     * [Vue相关](/vue/README.md)
     * [架构相关](/framework/README.md)
+    * [性能优化](/performance/README.md)
+    * [面试题](/interview/README.md)

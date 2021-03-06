@@ -15,3 +15,5 @@
 - [css的水平格式化](./css/css的水平格式化.md)
 - [伪元素的妙用](./css/伪元素的妙用.md)
 - [使用CSS:filter实现类PS操作](./css/使用filter实现类PS操作.md)
+- [Safari 3D transform变换z-index层级渲染异常的研究](https://www.zhangxinxu.com/wordpress/2016/08/safari-3d-transform-z-index/)
+- [z-index和transform,你真的了解吗？](https://www.cnblogs.com/reaf/p/5788781.html)
