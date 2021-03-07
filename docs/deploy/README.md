@@ -1,5 +1,6 @@
 # 前端部署
 
+* [前端构建工具对比](/deploy/buildToolsCompare.md)
 * [docker部署mongodb](./deploy/dockerMongodb.md)
 * [docker部署node服务](./deploy/dockerNode.md)
 * [docker常用命令](./deploy/dockerCommand.md)
