@@ -4,6 +4,7 @@
 - [前端年后面试真题](https://bitable.feishu.cn/app8Ok6k9qafpMkgyRbfgxeEnet?from=logout&table=tblEnSV2PNAajtWE&view=vewJHSwJVd)
 - [从一道前端面试题洞察面试玄机，以及编程基础的灵活应用](https://zhuanlan.zhihu.com/p/344496476)
 - [腾讯前端面试篇（一）](https://juejin.cn/post/6844903743125733390)
+- [FE-interview](https://github.com/qiu-deqing/FE-interview)
 - [前端面试题——自己实现bind](https://zhuanlan.zhihu.com/p/85438296)
 - [【1 月最新】前端 100 问：能搞懂 80% 的请把简历给我](https://juejin.cn/post/6844903885488783374)
 - [大厂面试题](https://www.kancloud.cn/freya001/interview/1235945)
