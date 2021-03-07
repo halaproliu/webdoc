@@ -1,4 +1,4 @@
-### isAllTrue
+### 判断所有入参都为true
 
 ```js
 function isAllTrue() {
