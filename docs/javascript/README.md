@@ -6,6 +6,7 @@
 - [JS判断是否是数组的方式以及优劣](/javascript/checkArray.md)
 - [requestAnimation实现动画](/javascript/requestAnimation.md)
 - [JavaScript深入之词法作用域](/javascript/lexicalScope.md)
+- [JavaScript深入之引擎解析过程](/javascript/Interpreter.md)
 - [JavaScript深入之原型链](/javascript/prototype.md)
 - [JavaScript深入之继承](/javascript/extends.md)
 - [JavaScript深入之EventLoop](/javascript/eventLoop.md)

@@ -5,4 +5,5 @@
 - [隐式类型转换问题](/problem/implicit.md)
 - [连续赋值问题](/problem/continueAssignment.md)
 - [parseInt问题](/problem/parseInt.md)
-- [类数组问题](/javascript/arrayLike.md)
+- [类数组问题](/problem/arrayLike.md)
+- [代码块](/problem/codeBlock.md)
