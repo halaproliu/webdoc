@@ -31,6 +31,43 @@ function debounce (fn, interval, immediate) {
 
 ### 节流函数实现
 
+<!-- tabs: start -->
+
+#### ** 第一次立即执行 **
+```js
+// 时间戳写法，第一次立即执行
+function throttle (fn, interval) {
+    let last = 0
+    return function (...args) {
+        let now = Date.now()
+        if (now - last >= interval) {
+            last = now
+            fn.apply(this, args)
+        }
+    }
+}
+```
+
+#### ** 第一次不立即执行 **
+
+```js
+function throttle (fn, interval) {
+    let timer = null
+    return function () {
+        let context = this
+        let args = arguments
+        if (!timer) {
+            timer = setTimeout(function () {
+                fn.apply(context, args)
+                timer = null
+            }, interval)
+        }
+    }
+}
+```
+
+#### ** 完整版 **
+
 ```js
 function throttle (fn, delay) {
     let timer = null
@@ -53,3 +90,6 @@ function throttle (fn, delay) {
     }
 }
 ```
+
+<!-- tabs: end -->
+
