@@ -3,6 +3,7 @@
 - [详解JavaScript强制类型转换](./javascript/typeConvert.md)
 - [使用new关键字实例化对象时发生了什么](/javascript/new.md)
 - [Set与Map的数据结构](/javascript/setAndMap.md)
+- [setInterval你不得不知道的事情](/javascript/setInterval.md)
 - [JS判断是否是数组的方式以及优劣](/javascript/checkArray.md)
 - [requestAnimation实现动画](/javascript/requestAnimation.md)
 - [JavaScript深入之词法作用域](/javascript/lexicalScope.md)

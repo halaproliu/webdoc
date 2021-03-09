@@ -35,3 +35,4 @@
 - [leetcode算法-最长有效括号](/algorithm/longestValidParentheses.md)
 - [leetcode算法-接雨水](/algorithm/trap.md)
 - [leetcode算法-二叉树的层序遍历](/algorithm/levelOrder.md)
+- [排序算法](/algorithm/sortAlgorithm.md)
