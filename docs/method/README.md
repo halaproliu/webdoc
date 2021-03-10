@@ -18,5 +18,6 @@
 - [hash路由实现](./method/hashRouter.md)
 - [Object.create实现](/method/objectCreate.md)
 - [前序、中序、后序遍历](/method/traversal.md)
+- [深度优先遍历和广度优先遍历](/method/deepTraverse.md)
 - [实现继承的方式](/method/extends.md)
 - [获取文章中出现最多的字符](/method/getMaxStr.md)
