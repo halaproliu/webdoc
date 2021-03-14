@@ -5,3 +5,4 @@
 - [http2特性](./http/http2.md)
 - [http缓存](https://juejin.cn/post/6844903598556446733?utm_medium=fe&utm_source=weixinqun%3Futm_medium%3Dfe&utm_source=weixinqun)
 - [跨域资源共享CORS](/http/cors.md)
+- [带你玩转prefetch, preload, dns-prefetch，defer和async](https://segmentfault.com/a/1190000011577248)
