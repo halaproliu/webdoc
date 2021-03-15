@@ -17,4 +17,4 @@
 - [React作者博客](https://overreacted.io/)
 - [前端分享](http://jartto.wang/all-categories/#posts-list-%E5%89%8D%E7%AB%AF%E5%88%86%E4%BA%AB)
 - [前端安全面试题大全](https://www.jianshu.com/p/544bb4bccd82)
-- [字节路白大佬前端面试题](./interview/interview2.md)
+- [字节路白大佬前端面试题](/interview/interview2.md)
