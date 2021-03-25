@@ -19,3 +19,4 @@
 - [前端安全面试题大全](https://www.jianshu.com/p/544bb4bccd82)
 - [字节路白大佬前端面试题](/interview/interview2.md)
 - [字节跳动最爱考的前端面试题：JavaScript 基础](https://mp.weixin.qq.com/s/NlQwstUWneIgPT-ft5RxwQ)
+- [FEX](https://oxyzhg.cn/fex/docs/advanced)
