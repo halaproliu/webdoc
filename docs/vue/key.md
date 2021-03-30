@@ -17,3 +17,61 @@ key 是 Vue 中 vnode 的唯一标记，通过这个 key，我们的 diff 操作
 由于key中0、1依然存在，所以vue会认为第三项被删除了，因此必须使用id作为key。
 
 假如后端没有给id，可以自己生成id或者uuid。
+
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue删除异常问题</title>
+    <style>
+        .item {
+            list-style: none;
+            display: flex;
+            flex: 1;
+        }
+
+        .item:nth-child(n+2) {
+            margin-top: 10px;
+        }
+
+        .btn {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <li class="item" v-for="(item, index) in arr" :key="index">
+                <aa :name="jajah"></aa>
+                <button class="btn" @click="del(index)">删除</button>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        Vue.component('aa', {
+            props: {
+                name: String
+            },
+            template: '<div><span>{{name}}</span><span>{{Math.floor(Math.random()*1000)}}</span></div>'
+        })
+        new Vue({
+            el: '#app',
+            data: {
+                arr: [1, 2, 3, 4]
+            },
+            methods: {
+                del (i) {
+                    this.arr.splice(i, 1)
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+```
