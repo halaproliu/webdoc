@@ -22,3 +22,4 @@
 - [FEX](https://oxyzhg.cn/fex/docs/advanced)
 - [ConardLi的blog](http://www.conardli.top/blog/article/)
 - [几个手写面试题](/interview/higherFunction.md)
+- [你在项目中做过哪些安全防范措施？](https://mp.weixin.qq.com/s/qmGp8OUqsBvzGy7i2px8LQ)
