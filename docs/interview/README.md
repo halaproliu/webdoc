@@ -10,7 +10,7 @@
 - [大厂面试题](https://www.kancloud.cn/freya001/interview/1235945)
 - [前端知识库](https://www.html5iq.com/index.html)
 - [2021年前端面试必读文章【超三百篇文章/赠复习导图】](https://juejin.cn/post/6844904116339261447#heading-4)
-- [高级知识点（持续更新）](https://zhuanlan.zhihu.com/p/56490498)
+- [我从来不理解JavaScript闭包，直到有人这样向我解释它...](https://zhuanlan.zhihu.com/p/56490498)
 - [上海莉莉丝、米哈游、B站、小红书、得物等互联网公司面试总结](https://mp.weixin.qq.com/s/dAlgSYaO1iCn6_WE7bkXdA)
 - [木易杨前端进阶](https://muyiy.cn/)
 - [springleo's blog](https://lq782655835.github.io/blogs/)
