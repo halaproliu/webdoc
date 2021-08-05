@@ -23,3 +23,4 @@
 - [实现继承的方式](/method/extends.md)
 - [获取文章中出现最多的字符](/method/getMaxStr.md)
 - [日期格式化](/method/date.md)
+- [判断是否是utf-8数据](/method/isUTF8.md)
