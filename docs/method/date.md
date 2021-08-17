@@ -33,17 +33,24 @@ const getDurationTime = (duration = 1, type = 'd') => {
   let year = date.getFullYear()
   let month = date.getMonth()
   let day = date.getDate()
+  let daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+  // 查看是否是闰年
+  if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0) {
+    daysInMonth[1] = 29
+  }
+  // 若日期大于前一个月，必须使用前一个月的最大日期
+  day = day > daysInMonth[month] ? daysInMonth[month] : day
   if (type === 'h') {
-    return new Date(new Date() - 3600 * 1000 * duration)
+    return new Date() - 3600 * 1000 * duration
   } else if (type === 'd') {
-    return new Date(new Date() - 3600 * 1000 * 24 * duration)
+    return new Date() - 3600 * 1000 * 24 * duration
   } else if (type === 'M') {
     if (month - duration > 0) {
       return new Date(year, month - duration, day).getTime()
     } else {
       return new Date(year - 1, 12 + (month - duration), day).getTime()
     }
-  } else if (type === 'y') {
+  } else {
     return new Date(year - 1, month, day).getTime()
   }
 }
