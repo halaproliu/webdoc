@@ -57,9 +57,56 @@ M             1000
 解释: M = 1000, CM = 900, XC = 90, IV = 4.
 ```
 
+来源：力扣（LeetCode）
+链接：https://leetcode-cn.com/problems/integer-to-roman
+著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+
 ### 求解
 
 - 使用字典保存罗马字符的个十百千位1-10的字符
 - 使用除法获取个十百千位数字，并取模去除最大位数
 - 分别取得个十百千位对应的字符字典值
 - 注意：边界为1-3999
+
+
+```js
+/**
+ * @param {number} num
+ * @return {string}
+ */
+var intToRoman = function(num) {
+    if (num < 1 || num > 3999) return ''
+    function getDictValue (key, value) {
+        const dicts = {
+            units: ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+            tens: ['X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+            hundreds: ['C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'],
+            throusands: ['M', 'MM', 'MMM']
+        }
+        return dicts[key][value - 1] || ''
+    }
+    let mod = 0
+    let throusands = ~~(num / 1000)
+    mod = num % 1000
+    let hundreds = ~~(mod / 100)
+    mod = mod % 100
+    let tens = ~~(mod / 10)
+    mod = mod % 10
+    let units = mod
+    let result = getDictValue('throusands', throusands) + getDictValue('hundreds', hundreds) + getDictValue('tens', tens) + getDictValue('units', units)
+    return result
+};
+```
+
+### 执行结果
+
+```js
+执行用时 :156 ms, 在所有 JavaScript 提交中击败了81.98%的用户
+内存消耗 :43.5 MB, 在所有 JavaScript 提交中击败了20.00%的用户
+```
+
+| 提交结果 | 执行用时 | 内存消耗 |
+|:------:|:------:|:-------:|
+|   通过  | 156 ms  |  43.5 MB |
+
+
