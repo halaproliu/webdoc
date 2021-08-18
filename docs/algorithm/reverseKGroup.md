@@ -1,3 +1,11 @@
+<!--
+ * @Author: brecht
+ * @Date: 2021-05-25 16:20:45
+ * @LastEditTime: 2021-08-18 13:21:57
+ * @LastEditors: brecht
+ * @Description: 
+ * @FilePath: /webdoc/docs/algorithm/reverseKGroup.md
+-->
 # leetcode算法-25-K个一组翻转链表
 
 ### 问题描述
@@ -92,9 +100,3 @@ var reverseKGroup = function(head, k) {
 | 提交结果 | 执行用时 | 内存消耗 |
 |:------:|:------:|:-------:|
 |   通过  | 88ms  |  39MB |
-
-更多前端资料请关注公众号 `【三分钟热度工程师】`
-
-![](https://user-gold-cdn.xitu.io/2020/6/12/172a8d876399efef?w=258&amp;h=258&amp;f=png&amp;s=45623)
-
-如果觉得写得还不错，可以关注[gitbook小册](https://halaproliu.github.io/gitbook/shellmd5/2596084d37a462e93b62f7c136e9eb0e.html)
