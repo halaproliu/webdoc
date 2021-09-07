@@ -117,3 +117,71 @@ module.exports = {
   },
 }
 ```
+
+### 方法三-使用文件夹路径mock（可无刷新修改）
+
+```js
+const path = require('path')
+const fs = require('fs')
+const cwd = process.cwd()
+const Mock = require('mockjs')
+
+const getMockData = (url) => {
+  let data
+  let result
+  delete require.cache[require.resolve(url)]
+  data = require(url)
+  if (typeof data === 'function') {
+    result = data(req, res)
+  } else {
+    result = data
+  }
+  result = Mock.mock(result)
+  return result
+}
+
+module.exports = async (req, res, next) => {
+  let reqUrl = req.url.split('?')[0]
+  let method = req.method.toLowerCase()
+  let basePath = path.join(cwd, 'mock')
+  let apiJsPath = path.join(basePath, method, reqUrl + '.js')
+  let apiJsonPath = path.join(basePath, method, reqUrl + '.json')
+  if (fs.existsSync(apiJsPath)) {
+    let result = getMockData(apiJsPath)
+    res.json(result)
+  } else if (fs.existsSync(apiJsonPath)) {
+    let result = getMockData(apiJsonPath)
+    res.json(result)
+  } else {
+    next()
+  }
+}
+```
+
+### 使用方法
+
+```js
+const mockMiddleware = require('./middleware/mockMiddleware')
+module.exports = {
+  devServer: {
+    disableHostCheck: true, // 避免浏览器验证host
+    contentBase: path.join(__dirname, 'mock'),
+    hot: true,
+    before: (app) => {
+        app.use(mockMiddleware)
+    },
+    proxy
+  },
+}
+```
+
+1.在`/mock`目录下按照请求方法和请求url创建json或js文件
+
+固定路径示例：
+> 请求: GET `/test/api`  
+> 创建`/mock/get/test/api.json`或`/mock/get/test/api.js`文件
+
+动态路径示例：
+
+> 请求: POST `/detail/${id}`  
+> 创建`/mock/post/detail/:id.json`或`/mock/post/detail/:id.js`文件
