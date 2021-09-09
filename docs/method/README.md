@@ -26,3 +26,4 @@
 - [日期格式化](/method/date.md)
 - [判断是否是utf-8数据](/method/isUTF8.md)
 - [使用xlsx-js导入csv](/method/uploadCsv.md)
+- [JavaScript实现在线查看zip文件](/method/zip.md)
