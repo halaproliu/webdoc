@@ -27,3 +27,5 @@
 - [判断是否是utf-8数据](/method/isUTF8.md)
 - [使用xlsx-js导入csv](/method/uploadCsv.md)
 - [JavaScript实现在线查看zip文件](/method/zip.md)
+- [contenteditable兼容问题解决方案](/method/contenteditable.md)
+- [requestAnimation实现](/method/requestAnimation.md)
