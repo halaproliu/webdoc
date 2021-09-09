@@ -80,8 +80,8 @@ Content-Type: text/html; charset=UTF-8
 
 Access-Control-Allow-Origin: *表示任何外域都可以访问，Access-Control-Allow-Origin: https://www.zhihu.com表示只有https://www.zhihu.com这个域名可以访问。
 
-- Allow-Origin-Allow-Method: 表示允许访问的方法。
-- Allow-Origin-Allow-Credentials: 表示允许发送cookie
+- Access-Control-Allow-Method: 表示允许访问的方法。
+- Access-Control-Allow-Credentials: 表示允许发送cookie
 - Access-Control-Expose-Headers 头让服务器把允许浏览器访问的头放入白名单
 在跨源访问时，XMLHttpRequest对象的getResponseHeader()方法只能拿到一些最基本的响应头，Cache-Control、Content-Language、Content-Type、Expires、Last-Modified、Pragma，如果要访问其他头，则需要服务器设置本响应头。
 

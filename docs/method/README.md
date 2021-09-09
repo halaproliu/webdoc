@@ -22,4 +22,7 @@
 - [深度优先遍历和广度优先遍历](/method/deepTraverse.md)
 - [实现继承的方式](/method/extends.md)
 - [获取文章中出现最多的字符](/method/getMaxStr.md)
-- [JS实现面向切面变成](/method/aop.md)
+- [JS实现面向切面编程](/method/aop.md)
+- [日期格式化](/method/date.md)
+- [判断是否是utf-8数据](/method/isUTF8.md)
+- [使用xlsx-js导入csv](/method/uploadCsv.md)

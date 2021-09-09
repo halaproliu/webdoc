@@ -88,9 +88,3 @@ var divide = function (dividend, divisor) {
 | 提交结果 | 执行用时 | 内存消耗 |
 |:------:|:------:|:-------:|
 |   通过  | 88ms  |  37.8MB |
-
-更多前端资料请关注公众号 `【三分钟热度工程师】`
-
-![](https://user-gold-cdn.xitu.io/2020/6/12/172a8d876399efef?w=258&amp;h=258&amp;f=png&amp;s=45623)
-
-如果觉得写得还不错，可以关注[gitbook小册](https://halaproliu.github.io/gitbook/shellmd5/2596084d37a462e93b62f7c136e9eb0e.html)
