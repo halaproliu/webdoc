@@ -185,3 +185,5 @@ module.exports = {
 
 > 请求: POST `/detail/${id}`  
 > 创建`/mock/post/detail/:id.json`或`/mock/post/detail/:id.js`文件
+
+详情可查看[webpack-api-mock](https://github.com/halaproliu/http-mock-middleware)
