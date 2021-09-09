@@ -22,3 +22,4 @@
 - [深度优先遍历和广度优先遍历](/method/deepTraverse.md)
 - [实现继承的方式](/method/extends.md)
 - [获取文章中出现最多的字符](/method/getMaxStr.md)
+- [JS实现面向切面变成](/method/aop.md)
