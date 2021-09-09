@@ -102,6 +102,10 @@ module.exports = {
 }
 ```
 
+### pages.js
+
+多页面title配置以及页面key配置，其中key值为最终build生成的页面key值，value为最终title值
+
 ```js
 //.bin/config/pages
 module.exports = {
