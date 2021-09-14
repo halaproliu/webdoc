@@ -8,7 +8,7 @@ function getAllQuery() {
     let obj = {}
     for (let i = 0; i < arr.length; i++) {
         let tmp = arr[i].split('=')
-        obj[tmp[0]] = tmp[1]
+        obj[tmp[0]] = decodeURIComponent(tmp[1])
     }
     return obj
 }
