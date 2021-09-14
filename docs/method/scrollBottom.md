@@ -17,7 +17,8 @@ const _lazyLoad = (box, pageNum, callback) => {
 
 /**
  * @description: 懒加载
- * @param {String|HTMLElement} el 监听dom节点
+ * @param {String|HTMLElement} rootEl 监听容器dom节点
+ * @param {Number} pageNum 分页页码
  * @param {Function} callback 回调函数
  * @return {*}
  **/
