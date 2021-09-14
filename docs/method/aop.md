@@ -1,4 +1,4 @@
-# JS实现面向切面变成
+# JS实现面向切面编程
 
 ```js
 var before = function (fn, beforeFn) {
