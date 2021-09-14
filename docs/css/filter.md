@@ -70,7 +70,7 @@ filter: opacity(25%);
 filter: brightness(75%) saturate(30%);
 ```
 
-具体实例可以使用pc点击查看我的[github](https://github.com/halaproliu/react-antd-redux)
+具体实例可以使用pc点击查看我的[react-antd-redux](https://github.com/halaproliu/react-antd-redux)
 
 或者直接查看[github pages](https://halaproliu.github.io/react-antd-redux/#/imageProcess)
 

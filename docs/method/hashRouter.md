@@ -82,5 +82,5 @@ class Router {
 
 通过isBack标志位，在判断是否是回退，并通过history对象，从而完成历史记录功能，以便支持回退。
 
-具体实现可以参照[我的github](https://github.com/halaproliu/myRouter)
+具体实现可以参照[https://github.com/halaproliu/myRouter](https://github.com/halaproliu/myRouter)
 
