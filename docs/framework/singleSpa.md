@@ -32,6 +32,7 @@ Vue.component('icon', VueAwesome)
 Vue.use(ElementUI)
 Vue.prototype.$ELEMENT = { size: 'medium' }
 Vue.config.productionTip = false
+Vue.config.devtools = process.env.NODE_ENV === 'development'
 
 let appOptions = {
   render (h) {
