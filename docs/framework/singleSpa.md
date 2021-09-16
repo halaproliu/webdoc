@@ -96,6 +96,16 @@ export const unmount = vueLifecycles.unmount
 ```js
 const packageJson = require('./package.json')
 module.exports = {
+  devServer: {
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
+    disableHostCheck: true,
+    sockPort: 8081,
+    sockHost: 'localhost',
+    https: true,
+    port: 8081
+  },
   configureWebpack: config => {
     let resultConfig = {}
     // 若不是独立运行，则要加上externals和output配置
