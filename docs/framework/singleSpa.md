@@ -25,6 +25,170 @@ yarn create single-spa
 
 - 子应用的package.json中的name为模块名称
 
+### root模块
+
+##### src/index.ejs
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Root Config</title>
+
+  <!--
+    Remove this if you only support browsers that support async/await.
+    This is needed by babel to share largeish helper code for compiling async/await in older
+    browsers. More information at https://github.com/single-spa/create-single-spa/issues/112
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+
+  <!--
+    This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
+    Learn more about CSP policies at https://content-security-policy.com/#directive
+  -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+  <meta name="importmap-type" content="systemjs-importmap" />
+  <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
+  <!-- More info at https://github.com/joeldenning/import-map-overrides/blob/master/docs/configuration.md#domain-list -->
+  <!-- <meta name="import-map-overrides-domains" content="denylist:prod.example.com" /> -->
+
+  <!-- Shared dependencies go into this import map. Your shared dependencies must be of one of the following formats:
+
+    1. System.register (preferred when possible) - https://github.com/systemjs/systemjs/blob/master/docs/system-register.md
+    2. UMD - https://github.com/umdjs/umd
+    3. Global variable
+
+    More information about shared dependencies can be found at https://single-spa.js.org/docs/recommended-setup#sharing-with-import-maps.
+  -->
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
+        "vue-router": "https://unpkg.com/vue-router@3.5.2/dist/vue-router.js",
+        "element-ui": "https://cdn.bootcdn.net/ajax/libs/element-ui/2.6.2/index.js",
+        "vue-awesome": "https://cdn.jsdelivr.net/npm/vue-awesome"
+      }
+    }
+  </script>
+  <link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js" as="script">
+
+  <!-- Add your organization's prod import map URL to this script's src  -->
+  <!-- <script type="systemjs-importmap" src="/importmap.json"></script> -->
+
+  <% if (isLocal) { %>
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "@orgName/root-config": "//localhost:9000/bilibili-root-config.js",
+        "navbar": "//localhost:8081/js/app.js"
+      }
+    }
+  </script>
+  <% } %>
+
+  <!--
+    If you need to support Angular applications, uncomment the script tag below to ensure only one instance of ZoneJS is loaded
+    Learn more about why at https://single-spa.js.org/docs/ecosystem-angular/#zonejs
+  -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+  <% if (isLocal) { %>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.js"></script>
+  <% } else { %>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+  <% } %>
+
+</head>
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <script>
+    System.import('@orgName/root-config');
+  </script>
+  <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+</body>
+</html>
+
+```
+
+##### src/orgName-root-config.js
+
+```js
+import { registerApplication, start } from "single-spa";
+import {
+  constructApplications,
+  constructRoutes,
+  constructLayoutEngine,
+} from "single-spa-layout";
+import microfrontendLayout from "./microfrontend-layout.html";
+
+const routes = constructRoutes(microfrontendLayout);
+const applications = constructApplications({
+  routes,
+  loadApp({ name }) {
+    return System.import(name);
+  },
+});
+const layoutEngine = constructLayoutEngine({ routes, applications });
+
+applications.forEach(registerApplication);
+layoutEngine.activate();
+start();
+```
+
+##### src/microfrontend-layout.html
+
+```html
+<single-spa-router>
+  <main>
+    <route default>
+      <application name="navbar"></application>
+    </route>
+  </main>
+</single-spa-router>
+```
+
+##### webpack.config.js
+
+```js
+const { merge } = require("webpack-merge");
+const singleSpaDefaults = require("webpack-config-single-spa");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+module.exports = (webpackConfigEnv, argv) => {
+  const orgName = "orgName";
+  const defaultConfig = singleSpaDefaults({
+    orgName,
+    projectName: "root-config",
+    webpackConfigEnv,
+    argv,
+    disableHtmlGeneration: true,
+  });
+
+  return merge(defaultConfig, {
+    // modify the webpack config however you'd like to by adding to this object
+    plugins: [
+      new HtmlWebpackPlugin({
+        inject: false,
+        template: "src/index.ejs",
+        templateParameters: {
+          isLocal: webpackConfigEnv && webpackConfigEnv.isLocal,
+          orgName,
+        },
+      }),
+    ],
+  });
+};
+```
+
 ### vue-cli-plugin-single-spa插件
 
 此插件做了针对single-spa微前端所需的配置
@@ -135,10 +299,8 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
-import VueAwesome from 'vue-awesome'
 import 'element-ui/lib/theme-chalk/index.css'
 
-Vue.component('icon', VueAwesome)
 Vue.use(ElementUI)
 Vue.prototype.$ELEMENT = { size: 'medium' }
 Vue.config.productionTip = false
@@ -182,6 +344,9 @@ export const unmount = vueLifecycles.unmount
 
 ```js
 const packageJson = require('./package.json')
+const path = require('path')
+const CompressionPlugin = require('compression-webpack-plugin')
+const webpack = require('webpack')
 module.exports = {
   devServer: {
     headers: {
