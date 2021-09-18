@@ -250,7 +250,7 @@ module.exports = (api, options) => {
 
 ### Vue
 
-需要在src目录下添加set-public-path.js文件设定模块名
+以下说的是针对vue-cli3版本所创建的vue项目
 
 ##### .env.standalone
 
@@ -398,4 +398,18 @@ module.exports = {
       })
   }
 }
+```
+
+##### Vue项目启动方式
+
+- 独立开发
+
+```js
+vue-cli-service serve --mode standalone
+```
+
+- single-spa模式
+
+```js
+vue-cli-service serve
 ```
