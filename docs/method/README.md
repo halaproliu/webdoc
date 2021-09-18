@@ -30,3 +30,4 @@
 - [contenteditable兼容问题解决方案](/method/contenteditable.md)
 - [requestAnimation实现](/method/requestAnimation.md)
 - [JS判断页面是否到达底部](/method/scrollBottom.md)
+- [笛卡尔积](/method/cartesion.md)
