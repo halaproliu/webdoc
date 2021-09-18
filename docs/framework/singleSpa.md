@@ -91,6 +91,7 @@ module.exports = (api, options) => {
 ##### .env.standalone
 
 ```env
+VUE_APP_STANDALONE=true
 # 必须，vue-cli-plugin-single-spa插件使用
 STANDALONE_SINGLE_SPA=true
 ```
