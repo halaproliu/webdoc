@@ -10,4 +10,4 @@
 - [怎么看待谷歌的开源RPC框架gRPC？](https://www.zhihu.com/question/30027669)
 - [彻底理解浏览器的缓存机制](https://juejin.cn/post/6844903593275817998)
 - [10分钟理解BFC原理](https://zhuanlan.zhihu.com/p/25321647)
-- [前端路由的两种模式：hash模式和 history模式](router.md)
+- [前端路由的两种模式：hash模式和 history模式](/http/router.md)
