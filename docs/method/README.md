@@ -31,3 +31,4 @@
 - [requestAnimation实现](/method/requestAnimation.md)
 - [JS判断页面是否到达底部](/method/scrollBottom.md)
 - [笛卡尔积](/method/cartesion.md)
+- [将数字转成货币形式](/method/num2money.md)
