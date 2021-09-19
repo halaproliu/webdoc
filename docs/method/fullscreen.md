@@ -259,5 +259,5 @@ var screenfull = {
 
 ### 八、更多资源
 
-[Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)
+[Fullscreen API](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)<br>
 [How to Use HTML5 FUll Screen API](https://www.2cto.com/kf/201411/348423.html)
