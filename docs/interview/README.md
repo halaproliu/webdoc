@@ -19,7 +19,6 @@
 - [前端安全面试题大全](https://www.jianshu.com/p/544bb4bccd82)
 - [字节路白大佬前端面试题](/interview/interview2.md)
 - [字节跳动最爱考的前端面试题：JavaScript 基础](https://mp.weixin.qq.com/s/NlQwstUWneIgPT-ft5RxwQ)
-- [FEX](https://oxyzhg.cn/fex/docs/advanced)
 - [ConardLi的blog](http://www.conardli.top/blog/article/)
 - [几个手写面试题](/interview/higherFunction.md)
 - [你在项目中做过哪些安全防范措施？](https://mp.weixin.qq.com/s/qmGp8OUqsBvzGy7i2px8LQ)
