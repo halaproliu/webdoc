@@ -130,3 +130,30 @@ function merge(left, right) {
   return result
 }
 ```
+
+### 二分查找
+
+```js
+/**
+ * @description 二分查找（前提条件是数组有序）
+ * @author halapro.liu
+ * @param {*} arr
+ * @param {*} target
+ * @returns
+ */
+function binarySearch(arr, target) {
+  let max = arr.length - 1
+  let min = 0
+  while (min < max) {
+    let mid = Math.floor((max + min) / 2)
+    if (target < arr[mid]) {
+      max = mid - 1
+    } else if (target > arr[mid]) {
+      min = mid + 1
+    } else {
+      return mid
+    }
+  }
+  return -1
+}
+```
