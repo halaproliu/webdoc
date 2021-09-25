@@ -35,7 +35,7 @@
         theme: 'classic'
       },
       ga: 'G-V5X6N8LG8R',
-      disqus: 'halaproliu'
+      // disqus: 'halaproliu'
     }
   </script>
   <!-- Docsify v4 -->
@@ -57,6 +57,18 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
   <!-- gif control -->
   <!-- <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script> -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script>
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '5600aa8d34021dc4a1f2',
+      clientSecret: 'ac4d2cc35db1abc4dd47ea21698224cdbeb23f65',
+      repo: 'halaproliu.github.io/webdoc/#/',
+      owner: 'halapro.liu',
+      admin: ['halapro.liu'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script>
 </body>
 </html>
