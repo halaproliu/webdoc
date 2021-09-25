@@ -63,9 +63,10 @@
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <script>
     const gitalk = new Gitalk({
+      id: decodeURI(location.pathname),
       clientID: '5600aa8d34021dc4a1f2',
       clientSecret: 'ac4d2cc35db1abc4dd47ea21698224cdbeb23f65',
-      repo: 'halaproliu.github.io',
+      repo: 'halaproliu.github.io/webdoc/#/',
       owner: 'halaproliu',
       admin: ['halaproliu'],
       // facebook-like distraction free mode
