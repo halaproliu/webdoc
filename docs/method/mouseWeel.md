@@ -3,7 +3,7 @@
 ### 实现方式
 
 ```js
-window.addEventListener('mousewheel', (e) => {
+function wheelAction (e) {
   let x = e.pageX
   let y = e.pageY
   let canvas = this.$refs.canvas
@@ -13,9 +13,15 @@ window.addEventListener('mousewheel', (e) => {
   let x1 = rect.left
   let x2 = x1 + rect.width
   if (x < x1 || x > x2 || y < y1 || y > y2) {
-    this.zoomer.pause()
+    // 不在元素内
   } else {
-    this.zoomer.resume()
+    // 在元素内
   }
-})
+}
+// 针对火狐的事件
+window.addEventListener('DOMMouseScroll', wheelAction)
+// 针对google，mousewheel非标准事件已被弃用
+window.addEventListener('wheel', wheelAction)
+// 兼容IE，ie不支持wheel事件
+window.addEventListener('mousewheel', wheelAction)
 ```
