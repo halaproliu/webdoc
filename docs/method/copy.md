@@ -7,7 +7,6 @@
 ```js
 const btn = document.getElementById('btn')
 btn.onclick = (e) => {
-  console.log(e)
   var i = document.createElement('input')
   document.body.appendChild(i)
   i.value = e.target.value
