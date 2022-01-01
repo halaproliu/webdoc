@@ -73,3 +73,36 @@ const getDurationTime = (duration = 1, type = 'd', returnType = 0, fmt) => {
 }
 ```
 
+### 时间戳转换为时分秒格式
+
+```js
+msToHours (val) {
+  if (!val) return '00:00:00'
+  let sec = 0
+  let min = 0
+  let hour = 0
+  let day = 0
+  if (val > 0) {
+    sec = (val / 1000).toFixed(2)
+    if (sec >= 60) {
+      min = Math.floor(sec / 60)
+      sec = Math.floor(sec % 60)
+    }
+    if (min >= 60) {
+      hour = Math.floor(min / 60)
+      min = min % 60
+    }
+    if (hour >= 24) {
+      day = Math.floor(hour / 24)
+      hour = hour % 24
+    }
+  }
+  return {
+    day,
+    hour,
+    min,
+    sec
+  }
+}
+```
+
