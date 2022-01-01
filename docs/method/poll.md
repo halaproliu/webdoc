@@ -78,7 +78,7 @@ export default {
     },
     methods: {
         async getApi () {
-            let res = axios.get('/xxx')
+            let res = await axios.get('/xxx')
             if (res.code === '0') { // 需要继续轮询
                 this.poll.start()
             } else if (res.code === '1') {
