@@ -7,6 +7,24 @@ echo "### 问题描述" >>$dist
 echo >>$dist
 echo >>$dist
 echo >>$dist
+echo >>***示例 1：***
+echo >>$dist
+echo "\`\`\`js" >>$dist
+echo >>$dist
+echo "\`\`\`" >>$dist
+echo >>$dist
+echo >>***示例 2：***
+echo "\`\`\`js" >>$dist
+echo >>$dist
+echo "\`\`\`" >>$dist
+echo >>$dist
+echo >>***示例 3：***
+echo "\`\`\`js" >>$dist
+echo >>$dist
+echo "\`\`\`" >>$dist
+echo >>$dist
+echo >>***提示:***
+echo >>$dist
 echo "### 求解" >>$dist
 echo >>$dist
 echo "\`\`\`js" >>$dist
