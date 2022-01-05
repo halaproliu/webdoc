@@ -35,5 +35,6 @@
 - [leetcode算法-最长有效括号](/algorithm/longestValidParentheses.md)
 - [leetcode算法-接雨水](/algorithm/trap.md)
 - [leetcode算法-二叉树的层序遍历](/algorithm/levelOrder.md)
+- [leetcode算法-搜索旋转排序数组](/algorithm/searchInRotatedSortedArray.md)
 - [排序算法](/algorithm/sortAlgorithm.md)
 - [带你逐步分析递归算法的时间复杂度](https://zhuanlan.zhihu.com/p/129887381)
