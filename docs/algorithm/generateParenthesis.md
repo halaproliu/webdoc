@@ -35,7 +35,6 @@ var generateParenthesis = function(n) {
     let res = []
     //  cur :当前字符  left：当前字符左括号 right:当前字符右括号
     const help = (cur, left, right) => {
-        console.log(cur)
         if (cur.length === 2 * n) {
             res.push(cur)
             return
