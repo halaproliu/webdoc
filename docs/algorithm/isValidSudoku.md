@@ -1,4 +1,4 @@
-# leetcode算法-isValidSudoku
+# leetcode算法-有效的数独
 
 ### 问题描述
 
