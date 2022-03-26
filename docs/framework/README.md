@@ -10,3 +10,4 @@
 - [微前端框架 之 single-spa 从入门到精通](https://jishuin.proginn.com/p/763bfbd5dd96)
 - [SINGLE-SPA的简单介绍与遇到的问题小结](https://www.freesion.com/article/6691783999/)
 - [微前端入门实战](/framework/singleSpa.md)
+- [工作中微前端项目实战](/framework/singleSpaCombat.md)
