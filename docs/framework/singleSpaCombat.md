@@ -9,3 +9,5 @@
 ### 使用[@hydesign/grape]整合vue案例
 
 [single-spa-vue](https://github.com/QxQstar/single-spa-vue)
+
+### 现有项目接入single-spa
