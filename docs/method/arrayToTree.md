@@ -1,3 +1,6 @@
+# 数组转tree结构
+
+```js
 var obj = [
   { "id": 3, "parent": 2 },
   { "id": 1, "parent": null },
@@ -30,3 +33,4 @@ const arrayToTree = function (items) {
   }
   return result
 }
+```
