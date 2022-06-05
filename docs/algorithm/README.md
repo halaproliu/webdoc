@@ -1,5 +1,8 @@
 # 算法
 
+- 贪心算法
+  - [分发饼干](/algorithm/greedy/findContentChildren.md)
+  - [分发糖果](/algorithm/greedy/candy.md)
 - [leetcode算法-面试题08.01-三步问题](/algorithm/waysToStep.md)
 - [leetcode算法-面试题08.06-汉诺塔问题](/algorithm/hanota.md)
 - [leetcode算法-两数之和](/algorithm/twoSum.md)

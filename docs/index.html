@@ -10,9 +10,9 @@
   <!-- <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css"> -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
   <style>
-      .docsify-tabs__tab {
-          outline: none;
-      }
+    .docsify-tabs__tab {
+        outline: none;
+    }
   </style>
 </head>
 <body>
@@ -36,6 +36,10 @@
         theme: 'classic'
       },
       ga: 'G-V5X6N8LG8R',
+      themeable: {
+        readyTransition : true, // default
+        responsiveTables: true  // default
+      }
       // disqus: 'halaproliu'
     }
   </script>
@@ -61,6 +65,7 @@
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+
   <script>
     const gitalk = new Gitalk({
       id: decodeURI(location.pathname),
