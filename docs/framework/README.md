@@ -11,3 +11,4 @@
 - [SINGLE-SPA的简单介绍与遇到的问题小结](https://www.freesion.com/article/6691783999/)
 - [微前端入门实战](/framework/singleSpa.md)
 - [工作中微前端项目实战](/framework/singleSpaCombat.md)
+- [single-spa微前端项目落地](/framework/singleSpaUmd.md)

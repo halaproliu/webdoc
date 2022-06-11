@@ -16,4 +16,3 @@
 <!-- - [深入浅出之swr](https://zhuanlan.zhihu.com/p/95089948) -->
 - [深入浅出之swr](/javascript/useSwr.md)
 - [学会 Proxy 就可以为所欲为吗？一段巧妙代码的简单解读](https://juejin.cn/post/6932295360274677773)
-- [single-spa微前端项目落地](/javascript/singlespa.md)
