@@ -8,3 +8,4 @@
 * [docker进行前端应用部署](/deploy/dockerWebDeploy.md)
 * [nginx入门学习](/deploy/nginxIntroduction.md)
 * [nginx配置本地调试反向代理](/deploy/nginxProxy.md)
+- [现代组合构建方法论之swc、esbuild、mfsu秒级时代的开端](/deploy/buildTools.md)
