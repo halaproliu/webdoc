@@ -31,7 +31,7 @@ yarn add husky pre-commit lint-staged @commitlint/cli @commitlint/config-convent
 ### 生成commitlint配置文件
 
 ```js
-echo"module.exports = {extends: ['@commitlint/config-conventional']};"> commitlint.config.js 
+echo "module.exports = {extends: ['@commitlint/config-conventional']};"> commitlint.config.js
 ```
 
 ### package.json添加配置

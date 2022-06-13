@@ -6,7 +6,7 @@
 - Portals: 可以在vue当前组件外渲染dom节点
 - Fragments: 允许有多个root节点
 - 更新的v-model-api: 支持多个models
-- Suspense: 一个特殊的组件
+- Suspense: 异步加载组件的loading界面
 - TypeScript: Vue从现在起完全支持Typescript
 
 本着学习的精神，我决定尝试下从零开始自己搭建一个Vue3 + Typescript的项目
