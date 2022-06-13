@@ -5,3 +5,4 @@
 - [Vue常用directives](/vue/directives.md)
 - [Vue多页面模板配置](/vue/multipage.md)
 - [Vue HOC实现](/vue/hoc.md)
+- [Building Vue3 + Typescript + without cli 最佳实践](/vue/vuewithoutcli.md)
