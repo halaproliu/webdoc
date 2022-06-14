@@ -1,6 +1,5 @@
 section.cover .cover-main {
   z-index: 100;
-  /* top: 150px; */
 }
 section.cover.has-mask .mask {
   background-color: #fff;
