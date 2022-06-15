@@ -16,4 +16,5 @@
     * [前端部署](/deploy/README.md)
     * [面试题](/interview/README.md)
     * [前端问题集](/problem/README.md)
+    - [shell知识](/shell/README.md)
     * [算法](/algorithm/README.md)
