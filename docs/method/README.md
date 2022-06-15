@@ -7,6 +7,7 @@
 - [实现无限累加函数](/method/add.md)
 - [解析url参数](/method/parseUrl.md)
 - [数组转tree结构](/method/arrayToTree.md)
+- [数组扁平化](/method/flat.md)
 - [类型判断](/method/type.md)
 - [浅比较](/method/shallowEqual.md)
 - [判断所有值匹配](/method/isAllTrue.md)
