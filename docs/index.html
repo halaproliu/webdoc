@@ -9,8 +9,12 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <!-- <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css"> -->
   <link rel="stylesheet" href="./_css/common.css">
+  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
   <link href="https://fonts.googleapis.com/css?family=Lobster"rel="stylesheet">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <!-- 代码高亮的样式 -->
+  <!-- <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet" /> -->
+
   <style>
     .docsify-tabs__tab {
         outline: none;
@@ -24,6 +28,8 @@
       name: '前端知识体系',
       repo: 'https://github.com/halaproliu',
       loadSidebar: true,
+      subMaxLevel: 3,
+      sidebarDisplayLevel: 2,
       coverpage: true,
       externalLinkTarget: '_blank',
       pagination: {
@@ -52,6 +58,9 @@
   <script src="//unpkg.com/docsify-copy-code"></script>
   <!-- 代码高亮 -->
   <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <!-- 核心的JS库 -->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script> -->
+  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
   <!-- 底部 上一页下一页 -->
   <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 全文搜索 -->
@@ -66,7 +75,8 @@
   <!-- gif control -->
   <!-- <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script> -->
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cd
+  n.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 
   <script>

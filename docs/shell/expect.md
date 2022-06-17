@@ -3,13 +3,18 @@
 ### 前言
 该脚本主要的使用场景是，需要连接远程跳板机操作的时候。每次输入远程地址和密码会显得有些繁琐。使用该脚本，可以自动输入密码，并连接到跳板机。
 
-**以mac为例：**
+> 以mac为例：
+
 1. 安装[HomeBrew](https://brew.sh/)
 2. 安装expect
    
 ```bash
 brew install expect # 需要先安装HomeBrew
 ```
+
+### 使用expect连接远程服务器
+
+> 脚本如下：
 
 ```bash
 #!/usr/bin/expect

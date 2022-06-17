@@ -47,7 +47,7 @@ sudo systemctl enable docker # 允许自动启动docker服务
 
 - 编写Dockerfile
 
-```sh
+```docker
 FROM nginx:latest
 LABEL maintainer "luffybryant@gmail.com"
 COPY ./dist/ /usr/share/nginx/html/blog
