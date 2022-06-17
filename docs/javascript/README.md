@@ -13,5 +13,5 @@
 - [JavaScript深入之EventLoop](/javascript/eventLoop.md)
 - [useRequest-蚂蚁中台标准请求 Hooks](/javascript/useRequest.md)
 - [深入浅出之swr](/javascript/useSwr.md)
-- [学会 Proxy 就可以为所欲为吗？一段巧妙代码的简单解读](https://juejin.cn/post/6932295360274677773)
+- [学会 Proxy 就可以为所欲为吗？一段巧妙代码的简单解读](/javascript/proxy.md)
 - [javaScript 数字精度丢失的问题，如何解决？](/javascript/precision.md)
