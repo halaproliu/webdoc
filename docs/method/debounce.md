@@ -7,8 +7,8 @@
 
 ### 使用场景
 
-防抖：input输入
-节流：resize、scroll
+- 防抖：input输入
+- 节流：resize、scroll
 
 ### 防抖函数实现
 

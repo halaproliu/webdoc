@@ -1,12 +1,37 @@
 # 深拷贝
 
+### 前言
+
+由于JavaScript引用类型特性，为了实现作用域隔离，深拷贝的使用必不可少。
+
+### 实现方式
+
+```js
+function deepClone(obj) {
+  if (Array.isArray(obj)) {
+    let clone = []
+    for (let i = 0; i < obj.length; i++) {
+      clone[i] = deepClone(obj[i])
+    }
+    return clone
+  } else if (typeof obj === 'object' && obj !== void 0) {
+    let clone = {}
+    for (let key in obj) {
+      clone[key] = deepClone(obj[key])
+    }
+    return clone
+  }
+}
+```
+
+### 完整实现
 
 ```js
 function isObj(obj) {
   return (typeof obj === 'object' || typeof obj === 'function') && obj !== null
 }
 // 只解决date，reg类型，其他的可以自己添加
-function deepCopy(obj, hash = new WeakMap()) {
+function deepClone(obj, hash = new WeakMap()) {
   let cloneObj
   let Constructor = obj.constructor
   switch (Constructor) {
