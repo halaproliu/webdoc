@@ -1,4 +1,4 @@
-# call、apply、bind实现
+# 改变this指向方法实现之-call,apply,bind
 
 > call实现
 

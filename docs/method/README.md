@@ -12,7 +12,7 @@
 - [浅比较](/method/shallowEqual.md)
 - [判断所有值匹配](/method/isAllTrue.md)
 - [字符串去除相邻重复项](/method/unique.md)
-- [call、apply、bind实现](/method/changeThis.md)
+- [改变this指向方法实现之-call,apply,bind](/method/changeThis.md)
 - [setTimeout模拟setInterval](/method/timer.md)
 - [中间件实现](/method/middleware.md)
 - [依赖注入](/method/ioc.md)

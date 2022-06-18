@@ -20,4 +20,4 @@
 - [前端优秀实践不完全指南](https://juejin.cn/post/6932647134944886797)
 - [输入框实现](/css/searchInput.md)
 - [10分钟理解BFC原理](/css/bfc.md)
-- [随机动画](/css/randomAnimation.md)
+- [使用random实现随机动画](/css/randomAnimation.md)
