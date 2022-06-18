@@ -225,6 +225,8 @@ loading作为用户体验中，不可或缺的一环，是前端开发中总能�
 
 ### 效果四
 
+![loading1](../imgs/rotateNeedle.gif)
+
 ```html
 <div class="box">
   <div class="loader-05"></div>

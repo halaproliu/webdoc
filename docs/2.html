@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #app {
+      width: 400px;
+      height: 400px;
+      position: relative;
+      margin: 0 auto;
+    }
+    .circle {
+      border-radius: 100%;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script type="text/babel">
+    function randomColor() {
+      return `#${Math.random().toString(16).slice(2, 8)}`
+    }
+    function RandomAnimation () {
+      let dom = ''
+      let currStyle = document.styleSheets[0]
+      let token = window.WebKitCSSKeyframesRule ? '-webkit-' : ''
+      let baseMove = 600
+      let styles = []
+      for (let i = 0; i < 20; i++) {
+        let randomWH = Math.floor(Math.random() * 100)
+        let top = Math.floor(Math.random() * baseMove)
+        let left = Math.floor(Math.random() * baseMove)
+        let moveTop = Math.floor(Math.random() * baseMove)
+        let moveLeft = Math.floor(Math.random() * baseMove)
+        currStyle.insertRule(`@${token}keyframes moveX${i} { 0% { left: ${left}px;} 100% { left: ${moveLeft}px; } }`);
+        currStyle.insertRule(`@${token}keyframes moveY${i} { 0% { top: ${top}px;} 100% { top: ${moveTop}px; } }`);
+        styles.push({
+          backgroundColor: randomColor(),
+          width: `${randomWH}px`,
+          height: `${randomWH}px`,
+          top: `${top}px`,
+          left: `${left}px`,
+          animation: `moveX${i} 4s cubic-bezier(0.36,0,0.64,1) -2s infinite alternate, moveY${i} 4s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate`
+        })
+      }
+      const Element = styles.map((style, index) => <div className="circle" style={style} key={index}></div>)
+      return (
+        <div>
+          {Element}
+        </div>
+      )
+    }
+    ReactDOM.render(
+      <RandomAnimation />,
+      document.getElementById('app')
+    )
+  </script>
+</body>
+</html>

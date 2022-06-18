@@ -1,6 +1,6 @@
 # call、apply、bind实现
 
-### call实现
+> call实现
 
 ```js
 Function.prototype.$call = function (ctx) {
@@ -15,7 +15,7 @@ Function.prototype.$call = function (ctx) {
 }
 ```
 
-### apply实现
+> apply实现
 
 ```js
 Function.prototype.$apply = function (ctx, args) {
@@ -34,7 +34,7 @@ Function.prototype.$apply = function (ctx, args) {
 }
 ```
 
-### bind实现
+> bind实现
 
 ```js
 Function.prototype.bind = function (oThis) {
