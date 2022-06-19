@@ -1,7 +1,7 @@
 # JavaScript方法实现
 
 - [Promise及其方法实现](/method/promise.md)
-  - [Promise A+](/method/PromiseAPlus.md)
+  - [Promise A+](/method/promiseAPlus.md)
   - [Promise.all](/method/PromiseAll.md)
   - [Promise.allSettled](/method/PromiseAllSettled.md)
   - [Promise flow](/method/PromiseFlow.md)
