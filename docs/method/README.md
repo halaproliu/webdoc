@@ -44,3 +44,4 @@
 - [JS实现复制剪贴板](/method/copy.md)
 - [JS判断鼠标滚动是否在指定元素内](/method/mouseWeel.md)
 - [vue中批量生成computed属性](/method/mapComputed.md)
+- [JavaScript实现Cookie操作](/method/cookie.md)
