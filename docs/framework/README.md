@@ -16,3 +16,4 @@
 - [husky + commitlint配置](/framework/huskycommitlint.md)
 - [什么是单点登录？如何实现？](/framework/sso.md)
 - [ESLint常见配置](/framework/eslint.md)
+- [从 0 构建自己的脚手架CLI知识体系（万字）](/framework/cli.md)
