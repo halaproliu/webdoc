@@ -11,7 +11,7 @@
 > 1.  通过命令行交互询问用户问题
 > 2.  根据用户回答的结果生成文件
 
-例如我们在使用 [vue-cli](https://link.juejin.cn/?target=https%3A%2F%2Fcli.vuejs.org%2Fzh%2Fguide%2Fcreating-a-project.html "https://cli.vuejs.org/zh/guide/creating-a-project.html") 创建一个 vue 项目时的时候 👇
+例如我们在使用 [vue-cli](https://cli.vuejs.org/zh/guide/creating-a-project.html) 创建一个 vue 项目时的时候 👇
 
 **step1：运行创建命令**
 
@@ -128,7 +128,7 @@ my-node-cli working~
 
 ### 2\. 询问用户信息
 
-实现与询问用户信息的功能需要引入 inquirer.js 👉 [文档看这里](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FSBoudrias%2FInquirer.js%2F "https://github.com/SBoudrias/Inquirer.js/")
+实现与询问用户信息的功能需要引入 inquirer.js 👉 [文档看这里](https://github.com/SBoudrias/Inquirer.js/)
 
 ```
 $ npm install inquirer --dev # yarn add inquirer --dev
@@ -297,7 +297,7 @@ my-node-cli
 
 用户输入的 `{ name: 'my-app' }` 已经添加到了生成的文件中了 ✌️
 
-点此打开 👉 [my-node-cli 源码地址](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FT-Roc%2Fmy-node-cli "https://github.com/T-Roc/my-node-cli")
+点此打开 👉 [my-node-cli 源码地址](https://github.com/T-Roc/my-node-cli)
 
 ## 二、热门脚手架工具库 🔧
 
@@ -305,21 +305,21 @@ my-node-cli
 
 | 名称 | 简介 |
 | --- | --- |
-| [commander](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Ftj%2Fcommander.js%2Fblob%2Fmaster%2FReadme_zh-CN.md "https://github.com/tj/commander.js/blob/master/Readme_zh-CN.md") | 命令行自定义指令 |
-| [inquirer](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FSBoudrias%2FInquirer.js%2F "https://github.com/SBoudrias/Inquirer.js/") | 命令行询问用户问题，记录回答结果 |
-| [chalk](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fchalk "https://www.npmjs.com/package/chalk") | 控制台输出内容样式美化 |
-| [ora](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fora "https://www.npmjs.com/package/ora") | 控制台 loading 样式 |
-| [figlet](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Ffiglet "https://www.npmjs.com/package/figlet") | 控制台打印 logo |
-| [easy-table](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Feasy-table "https://www.npmjs.com/package/easy-table") | 控制台输出表格 |
-| [download-git-repo](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fdownload-git-repo "https://www.npmjs.com/package/download-git-repo") | 下载远程模版 |
-| [fs-extra](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Ffs-extra "https://www.npmjs.com/package/fs-extra") | 系统fs模块的扩展，提供了更多便利的 API，并继承了fs模块的 API |
-| [cross-spawn](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcross-spawn "https://www.npmjs.com/package/cross-spawn") | 支持跨平台调用系统上的命令 |
+| [commander](https://github.com/tj/commander.js/blob/master/Readme_zh-CN.md) | 命令行自定义指令 |
+| [inquirer](https://github.com/SBoudrias/Inquirer.js/) | 命令行询问用户问题，记录回答结果 |
+| [chalk](https://www.npmjs.com/package/chalk) | 控制台输出内容样式美化 |
+| [ora](https://www.npmjs.com/package/ora) | 控制台 loading 样式 |
+| [figlet](https://www.npmjs.com/package/figlet) | 控制台打印 logo |
+| [easy-table](https://www.npmjs.com/package/easy-table) | 控制台输出表格 |
+| [download-git-repo](https://www.npmjs.com/package/download-git-repo) | 下载远程模版 |
+| [fs-extra](https://www.npmjs.com/package/fs-extra) | 系统fs模块的扩展，提供了更多便利的 API，并继承了fs模块的 API |
+| [cross-spawn](https://www.npmjs.com/package/cross-spawn) | 支持跨平台调用系统上的命令 |
 
 重点介绍下面这些，其他工具可以查看说明文档
 
 ### 1\. commander 自定义命令行指令
 
-更多用法 👉 [中文文档](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Ftj%2Fcommander.js%2Fblob%2Fmaster%2FReadme_zh-CN.md "https://github.com/tj/commander.js/blob/master/Readme_zh-CN.md")
+更多用法 👉 [中文文档](https://github.com/tj/commander.js/blob/master/Readme_zh-CN.md)
 
 简单案例 👇
 
@@ -465,13 +465,13 @@ program.parse()
 
 ### 3\. inquirer 命令行交互工具
 
-更多用法 👉 [文档地址](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Finquirer "https://www.npmjs.com/package/inquirer")
+更多用法 👉 [文档地址](https://www.npmjs.com/package/inquirer)
 
 inquirer 在脚手架工具中的**使用频率是非常高**的，其实在上文**脚手架的简单雏形**中，我们已经使用到了，这里就不过多介绍了。
 
 ### 4\. ora 命令行 loading 动效
 
-更多用法 👉 [文档地址](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fora "https://www.npmjs.com/package/ora")
+更多用法 👉 [文档地址](https://www.npmjs.com/package/ora)
 
 ```
 // 自定义文本信息
@@ -507,7 +507,7 @@ setTimeout(() => {
 
 ### 5\. cross-spawn 跨平台 shell 工具
 
-更多用法 👉 [文档地址](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fcross-spawn "https://www.npmjs.com/package/cross-spawn")
+更多用法 👉 [文档地址](https://www.npmjs.com/package/cross-spawn)
 
 在脚手架里面，可以用来自动执行 shell 命令，例如：
 
@@ -764,7 +764,7 @@ my-project {}
     -   当 `{ force: false }` 时 询问用户是否需要覆盖
 2.  如果不存在，直接创建
 
-这里用到了 fs 的扩展工具 [fs-extra](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Ffs-extra "https://www.npmjs.com/package/fs-extra")，先来安装一下
+这里用到了 fs 的扩展工具 [fs-extra](https://www.npmjs.com/package/fs-extra)，先来安装一下
 
 ```
 # fs-extra 是对 fs 模块的扩展，支持 promise 
@@ -836,7 +836,7 @@ program
 
 ![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/ea06d4eaa8a344b9b74ea3286f2bd8fc~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
 
-对比 `zr --help` 打印的结果，结尾处少了一条说明信息，这里我们做补充，重点需要注意**说明信息是带有颜色的**，这里就需要用到我们工具库里面的 [chalk](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fchalk "https://www.npmjs.com/package/chalk") 来处理
+对比 `zr --help` 打印的结果，结尾处少了一条说明信息，这里我们做补充，重点需要注意**说明信息是带有颜色的**，这里就需要用到我们工具库里面的 [chalk](https://www.npmjs.com/package/chalk) 来处理
 
 ```
 // bin/cli.js
@@ -852,7 +852,7 @@ program
 
 #### 2.5 打印个 Logo
 
-如果此时我们想给脚手架整个 Logo，工具库里的 [figlet](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Ffiglet "https://www.npmjs.com/package/figlet") 就是干这个的 😎
+如果此时我们想给脚手架整个 Logo，工具库里的 [figlet](https://www.npmjs.com/package/figlet) 就是干这个的 😎
 
 ```
 // bin/cli.js
@@ -881,7 +881,7 @@ program
 
 ### 3\. 询问用户问题获取创建所需信息
 
-这里召唤我们的老朋友 [inquirer](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Finquirer "https://www.npmjs.com/package/inquirer")，让他来帮我们解决命令行交互的问题
+这里召唤我们的老朋友 [inquirer](https://www.npmjs.com/package/inquirer)，让他来帮我们解决命令行交互的问题
 
 **接下来我们要做的：**
 
@@ -899,7 +899,7 @@ program
 
 逻辑实际上已经完成，这里补充一下询问的内容
 
-首选来安装一下 [inquirer](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Ffiglet "https://www.npmjs.com/package/figlet")
+首选来安装一下 [inquirer](https://www.npmjs.com/package/figlet)
 
 ```
 $ npm install inquirer --save
@@ -975,7 +975,7 @@ module.exports = async function (name, options) {
 
 #### 3.2 如何获取模版信息
 
-模板我已经上传到远程仓库：[github.com/zhurong-cli](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fzhurong-cli "https://github.com/zhurong-cli")
+模板我已经上传到远程仓库：[github.com/zhurong-cli](https://github.com/zhurong-cli)
 
 ![WX20210520-221040.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/b2fe38a3ee81465ca7c0235e5eb921ac~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
 
@@ -989,8 +989,8 @@ vue-template 版本信息 👇
 
 github 提供了
 
--   [api.github.com/orgs/zhuron…](https://link.juejin.cn/?target=https%3A%2F%2Fapi.github.com%2Forgs%2Fzhurong-cli%2Frepos "https://api.github.com/orgs/zhurong-cli/repos") 接口获取模板信息
--   [api.github.com/repos/zhuro…](https://link.juejin.cn/?target=https%3A%2F%2Fapi.github.com%2Frepos%2Fzhurong-cli%2F%24%257Brepo%257D%2Ftags "https://api.github.com/repos/zhurong-cli/$%7Brepo%7D/tags") 接口获取版本信息
+-   [api.github.com/orgs/zhuron…](https://api.github.com/orgs/zhurong-cli/repos) 接口获取模板信息
+-   [api.github.com/repos/zhuro…](https://api.github.com/repos/zhurong-cli/$%7Brepo%7D/tags) 接口获取版本信息
 
 我们在 lib 目录下创建一个 http.js 专门处理模板和版本信息的获取
 
@@ -1257,7 +1257,7 @@ module.exports = Generator;
 
 ### 4\. 下载远程模板
 
-下载远程模版需要使用 [download-git-repo](https://link.juejin.cn/?target=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fdownload-git-repo "https://www.npmjs.com/package/download-git-repo") 工具包，实际上它也在我们上面列的工具菜单上，但是在使用它的时候，需要注意一个问题，就是它是**不支持 promise**的，所以我们这里需要使用 使用 util 模块中的 [promisify](https://link.juejin.cn/?target=http%3A%2F%2Fnodejs.cn%2Fapi%2Futil.html%23util_util_promisify_original "http://nodejs.cn/api/util.html#util_util_promisify_original") 方法对其进行 promise 化
+下载远程模版需要使用 [download-git-repo](http://nodejs.cn/api/util.html#util_util_promisify_original) 方法对其进行 promise 化
 
 #### 4.1 安装依赖与 promise 化
 
@@ -1447,7 +1447,7 @@ zhurong-cli
 
 已经可以找到它了，这样我们就可以通过 npm 或者 yarn 全局安装使用了
 
-点此打开 👉 [zhurong-cli 源码地址](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FT-Roc%2Fzhurong-cli.git "https://github.com/T-Roc/zhurong-cli.git")
+点此打开 👉 [zhurong-cli 源码地址](https://github.com/T-Roc/zhurong-cli.git)
 
 ## 四、Yeoman：一个通用的脚手架系统
 
@@ -1508,7 +1508,7 @@ yo-project
 
 ```
 
-如何查找自己需要的 generator 呢？我们可以去官网 generators 列表搜索 👉 [点此进入](https://link.juejin.cn/?target=https%3A%2F%2Fyeoman.io%2Fgenerators%2F "https://yeoman.io/generators/")
+如何查找自己需要的 generator 呢？我们可以去官网 generators 列表搜索 👉 [点此进入](https://yeoman.io/generators/)
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/818b143d85864d408f456de12dedf92d~tplv-k3u1fbpfcp-zoom-in-crop-mark:3024:0:0:0.awebp)
 
@@ -1894,7 +1894,7 @@ module.exports = class extends Generator {
 
 我们可以看到用户输入的内容 `{ name: 'my-project' }` 已经显示在我们的 index.html 里面了 👌
 
-点此打开 👉 [generator-simple 源码地址](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FT-Roc%2Fgenerator-simple "https://github.com/T-Roc/generator-simple")
+点此打开 👉 [generator-simple 源码地址](https://github.com/T-Roc/generator-simple)
 
 yeoman 就介绍到这里，接下来我们来看另外一款脚手架工具 -- plop 👇
 
@@ -1902,7 +1902,7 @@ yeoman 就介绍到这里，接下来我们来看另外一款脚手架工具 -- 
 
 > plop 小在体积轻量，美在简单易用
 
-更多使用方法 👉 [plop 使用文档](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2Fplopjs%2Fplop "https://github.com/plopjs/plop")
+更多使用方法 👉 [plop 使用文档](https://github.com/plopjs/plop)
 
 我们可以将其直接集成到项目中，解决一下重复性的活着需要标准化的创建工作，下面我们就来做个小案例，比如
 
@@ -2012,7 +2012,7 @@ plop-templates
 └─ component.vue.hbs ........... 组件模板
 ```
 
-模板引擎我们用到是 Handlebars ，更多语法说明 👉 [Handlebars 中文网](https://link.juejin.cn/?target=https%3A%2F%2Fwww.handlebarsjs.cn%2F "https://www.handlebarsjs.cn/")
+模板引擎我们用到是 Handlebars ，更多语法说明 👉 [Handlebars 中文网](https://www.handlebarsjs.cn/)
 
 编辑 component.scss.hbs
 
@@ -2132,7 +2132,7 @@ components
 这里是组件 my-app 的使用说明
 ```
 
-点此打开 👉 [plop-demo 源码地址](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FT-Roc%2Fplop-demo "https://github.com/T-Roc/plop-demo")
+点此打开 👉 [plop-demo 源码地址](https://github.com/T-Roc/plop-demo)
 
 ## 六、写在最后
 
@@ -2148,7 +2148,7 @@ ___
 
 **参考文章：**
 
-[github.com/CodeLittleP…](https://link.juejin.cn/?target=https%3A%2F%2Fgithub.com%2FCodeLittlePrince%2Fgenerator-zx-vue%2Fblob%2Fmaster%2Fgenerators%2Fapp%2Findex.js "https://github.com/CodeLittlePrince/generator-zx-vue/blob/master/generators/app/index.js")  
-[cli.vuejs.org/zh/guide/cr…](https://link.juejin.cn/?target=https%3A%2F%2Fcli.vuejs.org%2Fzh%2Fguide%2Fcreating-a-project.html "https://cli.vuejs.org/zh/guide/creating-a-project.html")  
-[yeoman.io/authoring/i…](https://link.juejin.cn/?target=https%3A%2F%2Fyeoman.io%2Fauthoring%2Findex.html "https://yeoman.io/authoring/index.html")  
-[www.jianshu.com/p/93211004c…](https://link.juejin.cn/?target=https%3A%2F%2Fwww.jianshu.com%2Fp%2F93211004c5ac "https://www.jianshu.com/p/93211004c5ac")
+[github.com/CodeLittleP…](https://github.com/CodeLittlePrince/generator-zx-vue/blob/master/generators/app/index.js)  
+[cli.vuejs.org/zh/guide/cr…](https://cli.vuejs.org/zh/guide/creating-a-project.html)  
+[yeoman.io/authoring/i…](https://yeoman.io/authoring/index.html)  
+[www.jianshu.com/p/93211004c…](https://www.jianshu.com/p/93211004c5ac)
