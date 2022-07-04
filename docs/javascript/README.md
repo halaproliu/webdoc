@@ -15,3 +15,4 @@
 - [深入浅出之swr](/javascript/useSwr.md)
 - [学会 Proxy 就可以为所欲为吗？一段巧妙代码的简单解读](/javascript/proxy.md)
 - [javaScript 数字精度丢失的问题，如何解决？](/javascript/precision.md)
+- [浅谈关于「函数式编程」的理解](/javascript/functionProgramming.md)
