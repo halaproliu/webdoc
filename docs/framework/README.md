@@ -8,7 +8,8 @@
 - [钉钉前端-如何设计前端实时分析及报警系统](http://mp.weixin.qq.com/s?__biz=Mzg5NDEyMzA2NQ==&mid=2247486788&idx=1&sn=7bdc26887e2d4a9f5465113965c78f30&chksm=c0252012f752a90448aa1b04cb93ce6506a9d6f9a10bdb79c58e7484e1b87bbb3f766e4b3605&mpshare=1&scene=1&srcid=03262k39mQveT5uTLKttigyq&sharer_sharetime=1616722224645&sharer_shareid=eaa77cd7098e4a09510faf67c57e9289#rd)
 - [微前端架构实战中-single-spa 篇](https://zhuanlan.zhihu.com/p/367710216)
 - [微前端框架 之 single-spa 从入门到精通](https://jishuin.proginn.com/p/763bfbd5dd96)
-- [SINGLE-SPA的简单介绍与遇到的问题小结](https://www.freesion.com/article/6691783999/)
+<!-- - [SINGLE-SPA的简单介绍与遇到的问题小结](https://www.freesion.com/article/6691783999/) -->
+- [SINGLE-SPA的简单介绍与遇到的问题小结](/framework/problem.md)
 - [微前端入门实战](/framework/singleSpa.md)
 - [工作中微前端项目实战](/framework/singleSpaCombat.md)
 - [single-spa微前端项目落地](/framework/singleSpaUmd.md)

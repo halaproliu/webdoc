@@ -1,7 +1,6 @@
 # 前端面试题
 
 - [阿里前端面试指南，P6/P6+/P7的能力标准都在这儿了](https://zhuanlan.zhihu.com/p/143611353)
-- [前端年后面试真题](https://bitable.feishu.cn/app8Ok6k9qafpMkgyRbfgxeEnet?from=logout&table=tblEnSV2PNAajtWE&view=vewJHSwJVd)
 - [从一道前端面试题洞察面试玄机，以及编程基础的灵活应用](https://zhuanlan.zhihu.com/p/344496476)
 - [腾讯前端面试篇（一）](https://juejin.cn/post/6844903743125733390)
 - [FE-interview](https://github.com/qiu-deqing/FE-interview)
