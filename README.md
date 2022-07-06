@@ -2,7 +2,6 @@
 
 前端知识体系的构建
 
-<!-- docs/_sidebar.md -->
 * 介绍
   * [HTTP](https://halaproliu.github.io/webdoc/#/http/README.md)
   * [chrome](https://halaproliu.github.io/webdoc/#/chrome/README.md)

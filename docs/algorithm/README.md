@@ -45,3 +45,5 @@
 - [带你逐步分析递归算法的时间复杂度](https://zhuanlan.zhihu.com/p/129887381)
 - [leetcode算法合集](https://github.com/vortesnail/leetcode)
 - [数组求和，不使用循环，不使用标准库函数](/algorithm/sumwithoutloop.md)
+- [JavaScript 算法与数据结构](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
+- [写给零基础的前端算法入门指南，acmer带女友刷80+【递归与回溯篇】｜牛气冲天新年征文](/algorithm/algorithmintroduction.md)
