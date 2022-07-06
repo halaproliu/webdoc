@@ -94,7 +94,7 @@
 
 举个栗子
 
-```
+```js
 let name: string = "前端娱乐圈";
 
 let age: number = 38;
@@ -108,7 +108,7 @@ let hobby: string[] = ["write code", "玩游戏"]
 
 举个栗子
 
-```
+```js
 let name = "前端娱乐圈"; // 是一个string类型
 
 let age = 38;  // 是一个number类型
@@ -124,7 +124,7 @@ let hobby = ["write code", "玩游戏"] // 是一个string数组类型
 
 全局安装`typescript`环境。
 
-```
+```js
 npm i -g typescript
 ```
 
@@ -134,13 +134,13 @@ npm i -g typescript
 
 **index.ts**
 
-```
+```js
 const userName: string = "前端娱乐圈" 
 ```
 
 运行`tsc index.ts`，你可以看见在`index.ts`的同级下又生成一个`index.js`，如下就是编译的结果文件`index.js`。
 
-```
+```js
 var userName = "前端娱乐圈"
 ```
 
@@ -150,7 +150,7 @@ var userName = "前端娱乐圈"
 
 我们来看一下这个插件`ts-node`，这个插件可以直接运行`.ts`文件，并且也不会编译出来`.js`文件。
 
-```
+```js
 npm i ts-node
 
 // 运行 ts-node index.ts
@@ -170,7 +170,7 @@ npm i ts-node
 
 #### 1\. number
 
-```
+```js
 const count: number = 18; // 显示注解一个number类型
 
 const count1 = 18; // 不显示注解，ts会自动推导出来类型
@@ -179,7 +179,7 @@ const count1 = 18; // 不显示注解，ts会自动推导出来类型
 
 #### 2\. string
 
-```
+```js
 const str: string = "前端娱乐圈"; // 显示注解一个string类型
 
 const str1 = "蛙人"; // 不显示注解，ts会自动推导出来类型
@@ -187,7 +187,7 @@ const str1 = "蛙人"; // 不显示注解，ts会自动推导出来类型
 
 #### 3\. boolean
 
-```
+```js
 const status: string = false; // 显示注解一个string类型
 
 const status1 = true; // 不显示注解，ts会自动推导出来类型
@@ -195,7 +195,7 @@ const status1 = true; // 不显示注解，ts会自动推导出来类型
 
 #### 4\. null
 
-```
+```js
 const value: null = null;
 
 const value: null = undefined; // 这一点null类型可以赋值undefined跟在 js中是一样的，null == undefined
@@ -203,7 +203,7 @@ const value: null = undefined; // 这一点null类型可以赋值undefined跟在
 
 #### 5\. undefined
 
-```
+```js
 const value: undefined = undefined;
 
 const value: undefined = null; // 这一点null类型可以赋值undefined跟在 js中是一样的，null == undefined
@@ -215,7 +215,7 @@ const value: undefined = null; // 这一点null类型可以赋值undefined跟在
 
 那么在我们`TypeScript`中`void`类型是什么呢。它也是代表无效的，一般只用在**函数**上，告诉别人这个**函数**没有返回值。
 
-```
+```js
 function fn(): void {} // 正确
 
 function testFn(): void {
@@ -231,7 +231,7 @@ function fn2(): void { return null} // 显示返回null类型也可以，因为 
 
 `never`**一个永远不会有值的类型**或者也可以说**一个永远也执行不完的类型**，代表用于不会有值，`undefined`、`null`也算做是值。一般这个类型就不会用到，也不用。大家知道这个类型就行。
 
-```
+```js
 const test: never = null; // 错误
 const test1: never = undefined // 错误
 
@@ -252,7 +252,7 @@ function Person(): never { // 正确 代码报错了，执行不下去
 
 `any`这个类型代表**任何的**、**任意的**。希望大家在项目中，不要大片定义`any`类型。虽然它真的好使，那这样我们写`TypeScript`就没有任何意义了。
 
-```
+```js
 let value: any = ""; // 正确
 value = null // 正确
 value = {} // 正确
@@ -263,7 +263,7 @@ value = undefined // 正确
 
 `unknown`类型是我们`TypeScript`中第二个`any`类型，也是接受任意的类型的值。它的英文翻译过来就是**未知的**，我们来看一下栗子
 
-```
+```js
 let value: unknown = "" 
 value = 1;
 value = "fdsfs"
@@ -273,7 +273,7 @@ value = {}
 
 那现在肯定有小伙伴疑惑，诶，那它`unknown`相当于是`any`类型，那二者的区别是什么。我们来看一下
 
-```
+```js
 let valueAny: any = "";
 let valueUnknown: unknown = "";
 
@@ -297,7 +297,7 @@ status = valueUnknown // 报错，不能将unknown类型分配给null类型
 
 其实这俩意思一样，`{}`、`object`表示非原始类型，也就是除`number`，`string`，`boolean`，`symbol`，`null`或`undefined`之外的类型。
 
-```
+```js
 const list: object = {} // 空对象
 
 const list1: object = null; // null对象
@@ -311,7 +311,7 @@ list.toString()
 
 #### 2\. 数组
 
-```
+```js
 const list: [] = []; // 定义一个数组类型
 
 const list1: number[] = [1,2] // 定义一个数组，里面值必须是number
@@ -323,7 +323,7 @@ const list3: Array<number> = [1,2,3] // 泛型定义数组必须是number类型�
 
 #### 3\. 类
 
-```
+```js
 // 类
 class ClassPerson = {
     name: "前端娱乐圈"
@@ -335,7 +335,7 @@ person.xxx = 123; // 这行代码报错，因为当前类中不存在该xxx属�
 
 #### 4\. 函数
 
-```
+```js
 // 函数
 const fn: () => string = () => "前端娱乐圈" // 定义一个变量必须是函数类型的，返回值必须是string类型
 ```
@@ -346,7 +346,7 @@ const fn: () => string = () => "前端娱乐圈" // 定义一个变量必须是�
 
 #### 1\. 函数返回类型为number
 
-```
+```js
 function fn(a, b): number {
     return a + b;
 }
@@ -357,7 +357,7 @@ fn(1, 2)
 
 显示注解为`void`类型，函数没有返回值。
 
-```
+```js
 function fn(): void {
     console.log(1)
 }
@@ -367,7 +367,7 @@ function fn(): void {
 
 可以看到下面的函数类型，不会自动类型推导，我们实参虽然传入的1和2，但是形参方面是可以接受任意类型值的，所以系统也识别不出来你传递的什么，所以这里得需要我们显示定义注解类型。
 
-```
+```js
 function testFnQ(a, b) {
     return a + b
 }
@@ -378,7 +378,7 @@ testFnQ(1,2)
 
 我们来改造一下。
 
-```
+```js
 function testFnQ(a:number, b:number) {
     return a + b
 }
@@ -389,7 +389,7 @@ testFnQ(1,2)
 
 我们再来看一下参数对象显示注解类型，也是在`:`号后面赋值每个字段类型即可。
 
-```
+```js
 function testFnQ(obj : {num: number}) {
     return obj.num
 }
@@ -400,7 +400,7 @@ testFnQ({num: 18})
 
 元组用于表示一个已知数组的数量和类型的数组，定义数组中每一个值的类型，一般不经常使用。
 
-```
+```js
 const arr: [string, number] = ["前端娱乐圈", 1]
 
 const arr: [string, string] = ["前端娱乐圈", 1] // 报错
@@ -410,7 +410,7 @@ const arr: [string, string] = ["前端娱乐圈", 1] // 报错
 
 `Enum`枚举类型，可以设置默认值，如果不设置则为索引。
 
-```
+```js
 enum color {
     RED,
     BLUE = "blue",
@@ -430,7 +430,7 @@ enum color {
 
 比如下面栗子，`RED`没有设置值，然后`BLUE`设置了默认值，但是`GREEN`又没有设置，这时这个`GREEN`会报错。因为你第二个`BLUE`设置完默认值，第三又不设置，这时代码都不知道该咋递增了，所以报错。还有一种方案就是你给`BLUE`可以设置一个数字值，这时第三个`GREEN`不设置也会跟着递增，因为都是`number`类型。
 
-```
+```js
 // 报错
 enum color {
     RED,
@@ -448,7 +448,7 @@ enum color {
 
 比如`enum`枚举类型还可以反差，通过`value`查`key`值。像我们`json`对象就是不支持这种写法的。
 
-```
+```js
 enum color {
     RED,   // 0
     BLUE = 4,  // 4
@@ -467,7 +467,7 @@ console.log(color[0]) // RED
 
 比如在讲到这之前，我们不知道`接口`这东西，可能需要给对象定义一个类型的话，你可能会这样做。
 
-```
+```js
 const testObj: { name: string, age: number } = { name: "前端娱乐圈", age: 18 }
 
 const testObj1: { name: string, age: number } = { name: "蛙人", age: 18 }
@@ -475,7 +475,7 @@ const testObj1: { name: string, age: number } = { name: "蛙人", age: 18 }
 
 我们用接口来改造一下。
 
-```
+```js
 interface Types {
     name: string, 
     age: number
@@ -492,7 +492,7 @@ const testObj1: Types = { name: "蛙人", age: 18 }
 
 `readonly`类型，只可读状态，不可更改。
 
-```
+```js
 interface Types {
     readonly name: string, 
     readonly age: number
@@ -510,7 +510,7 @@ testObj1.name = "李四" // 无法更改name属性，因为它是只读属性
 
 可选修饰符以`?`定义，为什么需要可选修饰符呢，因为如果我们不写`可选修饰符`，那`interface`里面的属性都是必填的。
 
-```
+```js
 interface Types {
     readonly name: string, 
     readonly age: number,
@@ -524,7 +524,7 @@ const testObj: Types = { name: "前端娱乐圈", age: 18}
 
 我们的`interface`也是可以继承的，跟**ES6**`Class`类一样，使用`extends`关键字。
 
-```
+```js
 interface Types {
     readonly name: string, 
     readonly age: number,
@@ -542,7 +542,7 @@ const testObj: ChildrenType = { name: "前端娱乐圈", age: 18， hobby: ["cod
 
 interface里面这个功能就很强大，它可以写入不在interface里面的属性。
 
-```
+```js
 interface Types {
     readonly name: string, 
     readonly age: number,
@@ -554,7 +554,7 @@ const testObj: Types = { name: "前端娱乐圈", age: 19, hobby: [] }
 
 上面这个`testObj`这行代码会爆红，因为`hobby`属性不存在`interface`接口中，那么我们不存在的接口中的，还不让人家写了？。这时候可以使用**自定义**就是上面的`propName`。
 
-```
+```js
 interface Types {
     readonly name: string, 
     readonly age: number,
@@ -573,7 +573,7 @@ const testObj: Types = { name: "前端娱乐圈", age: 19, hobby: [] }
 
 > 注意：type别名不可以定义interface
 
-```
+```js
 type Types = string;
 
 type TypeUnite = string | number
@@ -586,7 +586,7 @@ const age: typeUnite = 18
 
 ##### 1\. type不支持interface声明
 
-```
+```js
 type Types = number
 type Types = string // 报错， 类型别名type不允许出现重复名字
 
@@ -605,7 +605,7 @@ interface Types1 {
 
 **再来看一下interface另一种情况**
 
-```
+```js
 interface Types1 {
     name: string
 }
@@ -619,7 +619,7 @@ interface Types1 {
 
 ##### 2\. type支持表达式 interface不支持
 
-```
+```js
 const count: number = 123
 type testType = typeof count
 
@@ -635,7 +635,7 @@ interface testType {
 
 ##### 3\. type 支持类型映射，interface不支持
 
-```
+```js
 type keys = "name" | "age"  
 type KeysObj = {
     [propName in keys]: string
@@ -655,7 +655,7 @@ interface testType {
 
 `联合类型`用`|`表示，说白了就是满足其中的一个`类型`就可以。
 
-```
+```js
 const statusTest: string | number = "前端娱乐圈"
 
 const flag: boolean | number = true
@@ -663,7 +663,7 @@ const flag: boolean | number = true
 
 再来看一下栗子。我们用函数参数使用**联合类型**看看会发生什么
 
-```
+```js
 function testStatusFn(params: number | string) {
     console.log(params.toFixed()) // 报错
 }
@@ -677,7 +677,7 @@ testStatusFn(1)
 
 #### 1\. typeof
 
-```
+```js
 function testStatusFn(params: number | string) {
     console.log(params.toFixed()) // 报错
 }
@@ -686,7 +686,7 @@ testStatusFn(1)
 
 **改造后**
 
-```
+```js
 // 正常
 function testStatusFn(params: string | number) {
     if (typeof params == "string") {
@@ -703,7 +703,7 @@ testStatusFn(1)
 
 #### 2\. in
 
-```
+```js
 // 报错
 interface frontEnd {
     name: string
@@ -722,7 +722,7 @@ testStatusFn({name: "蛙人"})
 
 **改造后**
 
-```
+```js
 // 正常
 function testStatusFn(params: frontEnd | backEnd) {
     if ("name" in params) {
@@ -739,7 +739,7 @@ testStatusFn({name: "蛙人"})
 
 #### 3\. as 断言
 
-```
+```js
 // 报错
 interface frontEnd {
     name: string
@@ -758,7 +758,7 @@ testStatusFn({name: "蛙人"})
 
 **改造后**
 
-```
+```js
 // 正常
 function testStatusFn(params: frontEnd | backEnd) {
     if ("name" in params) {
@@ -780,7 +780,7 @@ testStatusFn({age: 118})
 
 `交叉类型`就是跟联合类型相反，它用`&`表示，`交叉类型`就是两个类型必须存在。这里还用上面的**联合类型**的栗子来看下。
 
-```
+```js
 interface frontEnd {
     name: string
 }
@@ -798,7 +798,7 @@ testStatusFn({age: 118, name: "前端娱乐圈"})
 
 **注意：我们的接口interface出现同名属性**
 
-```
+```js
 interface frontEnd {
     name: string
 }
@@ -822,7 +822,7 @@ testStatusFn({name: "前端"})
 
 泛型是`TypeScript`中最难理解的了，这里我尽量用通俗易懂的方式讲明白。
 
-```
+```js
 function test(a: string | number, b: string | number) {
     console.log(a, b)
 }
@@ -833,7 +833,7 @@ test(1, "前端娱乐圈")
 
 这时就需要用到**泛型**了，**泛型**是专门针对不确定的类型使用，并且灵活。泛型的使用大部分都是使用`<T>`，当然也可以随便使用，如：`<Test>`、`<Custom>`都可以。
 
-```
+```js
 function test<T>(a: T, b: T) {
     console.log(a, b)
 }
@@ -846,7 +846,7 @@ test<string>("前端娱乐圈", "蛙人")
 
 上面这使用**泛型**就解决了我们刚才说的传入同一个类型参数问题，但是**泛型**也可以使用不同的参数，可以把调用类型定义为`<any>`
 
-```
+```js
 function test<T>(a: T, b: T) {
     console.log(a, b)
 }
@@ -856,7 +856,7 @@ test<any>(1, "前端娱乐圈")
 
 但是上面这种又有一种问题，它可以传入对象，但是如果我们只希望传入`number`类型和`string`类型。那么我们**泛型**也给我们提供了\*\*`约束`**类型。**泛型**使用`extends`进行了**类型约束\*\*，只能选择`string`、`number`类型。
 
-```
+```js
 function test<T extends number | string, Y extends number | string>(a: T, b: Y) {
     console.log(a, b)
 }
@@ -872,7 +872,7 @@ test<string, number>("前端娱乐圈", 18)
 
 `TypeScript`也支持`import`和`export`这里大多数小伙伴都知道，这里都不多讲啦。
 
-```
+```js
 // 导入
 
 import xxx, { xxx } from "./xxx"
@@ -896,7 +896,7 @@ export const name = "前端娱乐圈"
 
 `public`为`类`的公共属性，就是不管在`类`的内部还是外部，都可以访问该`类`中**属性**及**方法**。默认定义的**属性**及**方法**都是`public`。
 
-```
+```js
 class Person {
 name = "前端娱乐圈";
 public age = 18;
@@ -911,7 +911,7 @@ console.log(res.name, res.age) // 前端娱乐圈 18
 
 `private`为`类`的私有属性，只有在当前`类`里面才能访问，当前`类`就是`{}`里面区域内。在`{}`外面是不能访问`private`定义的**属性**及**方法**的
 
-```
+```js
 class Person {
 private name = "前端娱乐圈";
 private age = 18;
@@ -932,7 +932,7 @@ console.log(temp.getData()) // 爆红~，虽然继承了Person类，但是privat
 
 `protected`为`类`的保护属性，只有在**当前类**和**子类**可以访问。也就是说用`protected`属性定义的**子类**也可以访问。
 
-```
+```js
 class Person {
     protected username = "前端娱乐圈";
     protected age = 18;
@@ -953,7 +953,7 @@ console.log(temp.getData()) // 前端娱乐圈，18。可以正常访问父类�
 
 `implements`关键字只能在`class`中使用，顾名思义，实现一个新的类，从父级或者从接口实现所有的属性和方法，如果在`PersonAll`类里面不写进去接口里面已有的属性和方法则会报错。
 
-```
+```js
 interface frontEnd {
     name: string,
     fn: () => void
@@ -972,7 +972,7 @@ class PersonAll implements frontEnd {
 
 抽象类使用`abstract`关键字定义。`abstract`抽象方法不能实例化，如果，抽象类里面方法是抽象的，那么本身的类也必须是抽象的，抽象方法不能写函数体。父类里面有抽象方法，那么子类也必须要重新该方法。
 
-```
+```js
 // 抽象类
 abstract class Boss {
     name = "秦";
@@ -1005,7 +1005,7 @@ new A().call()
 
 **index.ts**
 
-```
+```js
 namespace SomeNameSpaceName { 
     const q = {}
 
@@ -1021,7 +1021,7 @@ namespace SomeNameSpaceName {
 
 #### 1\. reference引入
 
-```
+```js
 /// <reference path="./index.ts" />
 namespace SomeNameSpaceName { 
 export class person implements obj {
@@ -1032,7 +1032,7 @@ name: "前端娱乐圈"
 
 #### 2\. import
 
-```
+```js
 export interface valueData {
      name: string
 }
@@ -1052,7 +1052,7 @@ import { valueData } from "./xxx.ts"
 
 更多配置文档，请参考[官网](https://www.tslang.cn/docs/handbook/compiler-options.html")
 
-```
+```js
 {
     // include: ["*.ts"] // 执行目录下所有的ts文件转换成js文件
     // include: ["index.ts"] // 只将项目下index.ts文件转换为js文件
@@ -1077,7 +1077,7 @@ import { valueData } from "./xxx.ts"
 
 **适用于：并集类型**
 
-```
+```js
 interface UtilityFirst {
     name: string
 }
@@ -1099,7 +1099,7 @@ const ObjJson: Exclude<TypesTest, UtilityLast> = {
 
 **适用于：并集类型**
 
-```
+```js
 interface UtilityFirst {
     name: string
 }
@@ -1121,7 +1121,7 @@ const ObjJson: Extract<TypesTest, UtilityLast> = {
 
 **适用于：对象、数组**
 
-```
+```js
 interface UtilityFirst {
     name: string
 }
@@ -1138,7 +1138,7 @@ ObjJson.name = "蛙人" // 报错 只读状态
 
 **适用于：对象**
 
-```
+```js
 interface UtilityFirst {
     name: string
 }
@@ -1154,7 +1154,7 @@ const ObjJson: Partial<UtilityFirst> = {
 
 **适用于：对象**
 
-```
+```js
 interface UtilityFirst {
     name: string,
     age: number,
@@ -1173,7 +1173,7 @@ const ObjJson: Pick<UtilityFirst, "name" | "age"> = {
 
 **适用于：对象**
 
-```
+```js
 interface UtilityFirst {
     name: string,
     age: number,
@@ -1191,7 +1191,7 @@ const ObjJson: Pick<UtilityFirst, "name" | "age"> = {
 
 **适用于：对象**
 
-```
+```js
 interface UtilityFirst {
     name?: string,
     age?: number,
@@ -1211,7 +1211,7 @@ const ObjJson: Required<UtilityFirst> = {
 
 **适用于：对象**
 
-```
+```js
 type IndexList = 0 | 1 | 2
 
 const ObjJson: Record<IndexList, "前端娱乐圈"> = {
