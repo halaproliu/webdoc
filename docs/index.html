@@ -46,7 +46,7 @@
       tabs: {
         theme: 'classic'
       },
-      ga: 'G-V5X6N8LG8R',
+      ga: 'G-9003K88KRL',
       themeable: {
         readyTransition : true, // default
         responsiveTables: true  // default
@@ -85,6 +85,8 @@
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9003K88KRL"></script>
 
   <script>
     const gitalk = new Gitalk({
@@ -97,6 +99,11 @@
       // facebook-like distraction free mode
       distractionFreeMode: false
     })
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9003K88KRL');
   </script>
 </body>
 </html>
