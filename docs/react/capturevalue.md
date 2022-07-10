@@ -148,6 +148,3 @@ useEffect(()=>{
 
 -   [通过 React Hooks 声明式地使用 setInterval](https://link.segmentfault.com/?enc=xzsV4gAmvm7XMQJXXRUUfw%3D%3D.UHvfNivWGZUkTJ%2BxuKb1xnE1o1xV5Y1ghtEo3CvS6uPpJioo5LXhkyTkWWKCUmiF0AtXWAvi7YJ%2FlplYekXX2Q%3D%3D)：文章采用循序渐进的示例来解释问题。探索如何让 `setInterval` 和 `Hooks` 和谐地玩耍，为什么是这种方式，以及这种方式给你带来了什么新能力。
 -   [How to get the previous props or state?](https://link.segmentfault.com/?enc=e5lJBbF6gHbJfHUuoVYvGA%3D%3D.juAxaS2XsnZMdHa2ZHXnqPPI214i%2Bd%2Bu104ISnTMH%2FK61dtpp%2FWMPyY19gTgwKc0jyS%2BM6%2Be2i5u4KQ3IedQ0SO2hC2tEvQRipYktC1G9oA%3D): 如何获取变更前的 props 和 state ？官网提供的 `useRef` 来解决，也有人针对它进行了封装（[How to compare oldValues and newValues on React Hooks useEffect?](https://link.segmentfault.com/?enc=bR0jRo850%2Flt7TVHkbPd1w%3D%3D.6tlq954AWKW4WYNuudlT3RTml8d%2BBrjYYQJFHIMcmyEa7UJz%2BJQVp73XaPI%2B4JV9UJNiqKkUAkWwJng3DC4%2Fh7muomelN7pRC0Tzyvon%2Fjexulo5fS7RSa1QH%2FFB3VqdJH3N%2Bfvq0MKRZcdYzIu6jQ%3D%3D)）
-
-下面的是我的公众号二维码图片，欢迎关注。  
-![个人微信公众号](https://raw.githubusercontent.com/boycgit/web-image/master/blog20190618144832.png "个人微信公众号")
