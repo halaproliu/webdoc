@@ -20,6 +20,7 @@
 - [改变this指向方法实现之-call,apply,bind](/method/changeThis.md)
 - [setTimeout模拟setInterval](/method/timer.md)
 - [Koa中间件实现](/method/middleware.md)
+- [compose实现](/method/compose.md)
 - [IOC依赖注入](/method/ioc.md)
 - [JavaScript实现下载文件](/method/download.md)
 - [异步顺序执行](/method/PromiseExecutor.md)
