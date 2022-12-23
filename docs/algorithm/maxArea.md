@@ -1,24 +1,50 @@
+<!--
+ * @Author: liuwenjian
+ * @Date: 2022-12-09 10:26:54
+ * @LastEditors: liuwenjian
+ * @LastEditTime: 2022-12-23 12:40:57
+ * @FilePath: /webdoc/docs/algorithm/maxArea.md
+ * @Description: 
+-->
 # leetcode算法-11-盛最多水的容器
 
 ### 问题描述
 
-给你 n 个非负整数 a1，a2，...，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。
+<p>给定一个长度为 <code>n</code> 的整数数组&nbsp;<code>height</code>&nbsp;。有&nbsp;<code>n</code>&nbsp;条垂线，第 <code>i</code> 条线的两个端点是&nbsp;<code>(i, 0)</code>&nbsp;和&nbsp;<code>(i, height[i])</code>&nbsp;。</p>
 
-***说明***：你不能倾斜容器，且 n 的值至少为 2。
+<p>找出其中的两条线，使得它们与&nbsp;<code>x</code>&nbsp;轴共同构成的容器可以容纳最多的水。</p>
 
-![](../imgs/maxArea.jpg)
+<p>返回容器可以储存的最大水量。</p>
 
+<p><strong>说明：</strong>你不能倾斜容器。</p>
 
-图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。
+<p>&nbsp;</p>
 
- 
+<p><strong>示例 1：</strong></p>
 
-示例：
+<p><img alt="" src="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg" /></p>
 
-```js
-输入：[1,8,6,2,5,4,8,3,7]
-输出：49
-```
+<pre>
+<strong>输入：</strong>[1,8,6,2,5,4,8,3,7]
+<strong>输出：</strong>49 
+<strong>解释：</strong>图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为&nbsp;49。</pre>
+
+<p><strong>示例 2：</strong></p>
+
+<pre>
+<strong>输入：</strong>height = [1,1]
+<strong>输出：</strong>1
+</pre>
+
+<p>&nbsp;</p>
+
+<p><strong>提示：</strong></p>
+
+<ul>
+	<li><code>n == height.length</code></li>
+	<li><code>2 &lt;= n &lt;= 10<sup>5</sup></code></li>
+	<li><code>0 &lt;= height[i] &lt;= 10<sup>4</sup></code></li>
+</ul>
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/container-with-most-water
