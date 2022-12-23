@@ -2,7 +2,7 @@
  * @Author: liuwenjian
  * @Date: 2022-12-09 10:26:54
  * @LastEditors: liuwenjian
- * @LastEditTime: 2022-12-23 12:40:57
+ * @LastEditTime: 2022-12-23 12:43:01
  * @FilePath: /webdoc/docs/algorithm/maxArea.md
  * @Description: 
 -->
@@ -59,7 +59,7 @@
 - 设定left，right，max三个基本变量
 - 盛水部分即为一个矩形，长为right-left的长度，宽为left和right中较低的一个部分
 - 进行遍历循环，获取当前可盛水面积，当前面积大于最大值时，则当前面积为最大值
-- 当left的高度小于right的高度时，则left+1，反之，right+1
+- 当left的高度小于right的高度时，则left+1，反之，right-1
 
 
 ```js
