@@ -1,11 +1,3 @@
-<!--
- * @Author: liuwenjian
- * @Date: 2022-12-09 10:26:54
- * @LastEditors: liuwenjian
- * @LastEditTime: 2022-12-23 12:43:01
- * @FilePath: /webdoc/docs/algorithm/maxArea.md
- * @Description: 
--->
 # leetcode算法-11-盛最多水的容器
 
 ### 问题描述

@@ -37,6 +37,8 @@
 
 ### 求解
 
+https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/solutions/1658196/maimai-by-1105389168-heyc/?languageTags=javascript
+
 ```js
 // 买卖股票的最佳时机
 // 贪心
