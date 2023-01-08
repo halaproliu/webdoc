@@ -59,7 +59,7 @@ p = &quot;a*c?b&quot;
 
 ### 求解
 
-##### 解题思路：
+##### 解法一：
 
 1. 定义 dp table
 
@@ -99,5 +99,42 @@ var isMatch = function(s, p) {
       }
     }
     return dp[m][n]
+};
+```
+
+##### 解法二
+
+- 遍历字符串 s 和 p
+  - if (s[sIdx] === p[pIdx] || p[pIdx] === '?')，当前字符匹配成功，sIdx++ pIdx++
+  - else if ( p[pIdx] === '*')
+    - 记录当前匹配 * 的位置，sStarIdx = sIdx;pStarIdx = pIdx++;
+    - 这时先让 * 匹配 0 个字符，如果匹配 0 个字符不成功，则根据之前记录的 sStarIdx 和 pStarIdx 回溯到这个地方，再让 * 匹配 1 个字符，如果匹配 1 个字符也不成功，则继续回溯回来，匹配 2 个字符，以此类推
+  - else if (pStarIdx < 0)，则说明当前字符串不匹配，并且没有 * ，则直接 return false;
+当遍历完后，如果 p 中还有多余的字符的话，那么必须都得是 * ，否则就匹配不成功，则直接 return false;
+  - 最后 return true; 表示匹配成功
+
+```js
+/**
+ * @param {string} s
+ * @param {string} p
+ * @return {boolean}
+ */
+var isMatch = function(s, p) {
+    let sIdx = 0, pIdx = 0, sStarIdx = -1, pStarIdx = -1;
+    while (sIdx < s.length) {
+        if (pIdx < p.length && (s[sIdx] === p[pIdx] || p[pIdx] === '?')) {
+            sIdx++, pIdx++;
+        } else if (pIdx < p.length && p[pIdx] === '*') { //记录如果之后序列匹配不成功时， sIdx和pIdx需要回溯到的位置
+            sStarIdx = sIdx;
+            pStarIdx = pIdx++; // 将 pIdx++，sIdx不变，表示先让 * 匹配 0 个字符，不行再回溯
+        } else if (pStarIdx > -1) { //发现当前字符不匹配且没有星号 但是 pStarIdx > -1 说明可能是 * 之前匹配的字符数量少了 这时回溯，让*匹配的字符增加一个
+            sIdx = ++sStarIdx;
+            pIdx = pStarIdx + 1;
+        } else {
+            return false;
+        }
+    }
+    while (pIdx < p.length) if (p[pIdx++] !== '*') return false; //如果 p 中还有多余的字符的话，那必须都是 * 否则 匹配就不成功
+    return true;
 };
 ```
