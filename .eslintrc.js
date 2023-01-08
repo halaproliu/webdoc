@@ -10,7 +10,7 @@ module.exports = {
     sourceType: 'module'
   },
   rules: {
-    indent: [2, 2],
+    indent: [2, 4],
     semi: [2, 'never'],
     quotes: [2, 'single'],
     'no-mixed-spaces-and-tabs': [2],
