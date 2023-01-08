@@ -30,6 +30,7 @@
 - [leetcode算法-两两交换链表中的节点](/algorithm/swapPairs.md)
 - [leetcode算法-K个一组翻转链表](/algorithm/reverseKGroup.md)
 - [leetcode算法-删除排序数组中的重复项](/algorithm/removeDuplicates.md)
+- [leetcode算法-删除有序数组中的重复项 II](/algorithm/removeDuplicates2.md)
 - [leetcode算法-移除元素](/algorithm/removeElement.md)
 - [leetcode算法-实现strStr](/algorithm/strStr.md)
 - [leetcode算法-两数相除](/algorithm/divide.md)
