@@ -131,6 +131,44 @@ function merge(left, right) {
 }
 ```
 
+### 插入排序
+
+```js
+function insertSort(arr) {
+    if (arr.length <= 1) return arr
+    for (let i = 0; i < arr.length; i++) {
+        let curr = arr[i]
+        let j = i
+        while(j > 0 && curr < arr[j - 1]) {
+            arr[j] = arr[j - 1]
+            j--
+        }
+        arr[j] = curr
+    }
+    return arr
+}
+```
+
+### 选择排序
+
+```js
+function selectionSort(arr) {
+    let len = arr.length
+    for (let i = 0; i < len; i++) {
+        let minIndex = i
+        for (let j = i + 1; j < len; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j
+            }
+        }
+        let tmp = arr[i]
+        arr[i] = arr[minIndex]
+        arr[minIndex] = tmp
+    }
+    return arr
+}
+```
+
 ### 二分查找
 
 ```js
