@@ -10,7 +10,22 @@ var flat1 = function(arr) {
     }, [])
 }
 
-// console.log(flat1([1, 3, 4, [8, 9, [10, 11]]]))
+Array.prototype.flat = function (depth = Infinity) {
+    return this.reduce((prev, next) => {
+        if (Array.isArray(next)) {
+            if(depth--) {
+                return prev.concat(next.flat(depth))
+            } else {
+                let arr = []
+                arr.push(next)
+                return prev.concat(arr)
+            }
+        }
+        return prev.concat(next)
+    }, [])
+}
+
+// console.log([1, 3, 4, [8, 9, [10, 11, [23, 33]]]].flat())
 
 export default flat
 

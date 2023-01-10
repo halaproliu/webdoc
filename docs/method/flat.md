@@ -47,3 +47,22 @@ var arr = [[1, 2, 2], [3, 4, 5, 5], [6, 7, 8, 9, [11, 12, [12, 13, [14]]]], 10]
 Array.from(new Set(arr.toString().split(',').sort((a, b) => a - b)))
 ```
 
+### 层级拍平
+
+```js
+Array.prototype.flat = function (depth = Infinity) {
+    return this.reduce((prev, next) => {
+        if (Array.isArray(next)) {
+            if(depth--) {
+                return prev.concat(next.flat(depth))
+            } else {
+                let arr = []
+                arr.push(next)
+                return prev.concat(arr)
+            }
+        }
+        return prev.concat(next)
+    }, [])
+}
+```
+
