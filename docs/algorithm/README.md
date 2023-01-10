@@ -15,7 +15,7 @@
 - [leetcode算法-整数翻转](/algorithm/intergerReverse.md)
 - [leetcode算法-字符串转换整数](/algorithm/myAtoi.md)
 - [leetcode算法-回文数](/algorithm/isPalindrome.md)
-- [leetcode算法-回文数](/algorithm/validIsPalindrome.md)
+- [leetcode算法-验证回文数](/algorithm/validIsPalindrome.md)
 - [leetcode算法-盛最多水的容器](/algorithm/maxArea.md)
 - [leetcode算法-整数转罗马数字](/algorithm/intToRoman.md)
 - [leetcode算法-罗马数字转整数](/algorithm/romanToInt.md)
