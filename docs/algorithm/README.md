@@ -72,6 +72,7 @@
 - [leetcode算法-只出现一次的数字 II](/algorithm/singleNumber2.md)
 - [leetcode算法-完全平方数](/algorithm/numSquares.md)
 - [leetcode算法-路径总和](/algorithm/hasPathSum.md)
+- [leetcode算法-最短回文串](/algorithm/shortestPalindrome.md)
 - [排序算法](/algorithm/sortAlgorithm.md)
 - [带你逐步分析递归算法的时间复杂度](https://zhuanlan.zhihu.com/p/129887381)
 - [leetcode算法合集](https://github.com/vortesnail/leetcode)
