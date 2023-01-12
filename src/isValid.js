@@ -26,4 +26,26 @@ var isValid = function(s) {
     return !arr.length
 };
 
+let isValid = function(s) {
+    if (s.length % 2 === 1) {
+        return false
+    }
+    let map = new Map([
+        [')', '('],
+        ['}', '{'],
+        [']', '['],
+    ])
+    let stack = []
+    for (let char of s) {
+        if (map.has(char)) {
+            if (stack.pop() !== map.get(char)) {
+                return false
+            }
+        } else {
+            stack.push(char)
+        }
+    }
+    return !stack.length
+}
+
 export default isValid
