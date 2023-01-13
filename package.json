@@ -8,6 +8,7 @@
   },
   "scripts": {
     "create": "bash .bin/create.sh",
+    "algo": "bash .bin/algorithm.sh",
     "lint": "eslint src/* --format codeframe",
     "test": "mocha --require @babel/register"
   },
