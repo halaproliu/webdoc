@@ -41,6 +41,44 @@
 
 ### 求解
 
+- 使用动态规划
+
+使用dp[i][j]表示从左上角出发到(i,j)位置的最小路径和。
+dp[0][0] = grid[0][0],其他元素的状态转移方程如下：
+
+- 当i > 0且j = 0时，dp[i][0] = dp[i - 1][0] + grid[i][0]
+- 当j = 0且j > 0时，dp[0][j] = dp[0][j - 1] + grid[0][j]
+- 当i > 0且j > 0时，dp[i][j] = min(dp[i - 1][j] + dp[i][j - 1]) + grid[i][j]
+
+最后得到的dp[m - 1][n - 1]的值即为从网格左上角到网格右下角的最小路径和。
+
+```js
+/**
+ * @param {number[][]} grid
+ * @return {number}
+ */
+var minPathSum = function(grid) {
+    const m = grid.length
+    const n = grid[0].length
+    const dp = Array.from(new Array(m), _ => new Array(n).fill(0))
+    dp[0][0] = grid[0][0]
+    for (let i = 1; i < m; i++) {
+        dp[i][0] = dp[i - 1][0] + grid[i][0]
+    }
+    for (let i = 1; i < n; i++) {
+        dp[0][i] = dp[0][i - 1] + grid[0][i]
+    }
+    for (let i = 1; i < m; i++) {
+        for (let j = 1; j < n; j++) {
+            dp[i][j] = Math.min(dp[i][j - 1], dp[i - 1][j]) + grid[i][j]
+        }
+    }
+    return dp[m - 1][n - 1]
+};
+```
+
+- 状态压缩
+
 ```js
 function minPathSum(grid) {
     const n = grid.length;
