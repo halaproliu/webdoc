@@ -5,6 +5,7 @@
   - [Promise.all](/method/PromiseAll.md)
   - [Promise.allSettled](/method/PromiseAllSettled.md)
   - [Promise flow](/method/PromiseFlow.md)
+  - [promisify](/method/promisify.md)
 - [数组方法]
   - [数组转tree结构](/method/arrayToTree.md)
   - [数组扁平化](/method/flat.md)
