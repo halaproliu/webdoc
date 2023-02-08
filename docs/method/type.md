@@ -17,3 +17,17 @@ function type(obj) {
     : typeof obj
 }
 ```
+
+### 如何判断async函数
+
+```js
+function isAsyncFunction(func) {
+  return Object.prototype.toString.call(func) === '[object AsyncFunction]'
+}
+```
+
+```js
+function isAsyncFunction(func) {
+  return func[Symbol.toStringTag] === 'AsyncFunction'
+}
+```
