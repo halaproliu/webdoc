@@ -6,3 +6,4 @@
 - [前端性能优化之白屏时间](/performance/optimize.md)
 - [first-meaningful-paint](/performance/firstmp.md)
 - [7 天打造前端性能监控系统](/performance/sevenPerformanceMonitor.md)
+- [图片是否要开启gzip压缩](/performance/image.md)
