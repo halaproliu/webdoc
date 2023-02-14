@@ -1,4 +1,4 @@
-# 类型判断
+# JavaScript类型判断
 
 ```js
 var class2type = {}
@@ -29,5 +29,21 @@ function isAsyncFunction(func) {
 ```js
 function isAsyncFunction(func) {
   return func[Symbol.toStringTag] === 'AsyncFunction'
+}
+```
+
+### 如何判断isPromiseLike
+
+```js
+function isPromiseLike(obj) {
+  return obj !== null && (typeof obj === 'object' || typeof obj === 'function') && typeof obj.then === 'function'
+}
+```
+
+### 判断浏览器是否支持方法
+
+```js
+function isNative(Ctor) {
+  return typeof Ctor === 'function' && /native code/.test(Ctor.toString())
 }
 ```
