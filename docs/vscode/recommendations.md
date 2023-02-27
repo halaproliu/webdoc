@@ -10,7 +10,7 @@
         "dbaeumer.vscode-eslint",
         "formulahendry.auto-close-tag",
         "formulahendry.auto-rename-tag",
-        "jinmin.vscode-js-console-utils",
+        "whtouche.vscode-js-console-utils",
         "hzwuxinhan.goto",
         "obkoro1.korofileheader",
         "felipecaputo.git-project-manager",
@@ -25,7 +25,8 @@
         "formulahendry.code-runner",
         "shd101wyy.markdown-preview-enhanced",
         "wallabyjs.quokka-vscode",
-        "wayou.vscode-todo-highlight"
+        "wayou.vscode-todo-highlight",
+        "jasonnutter.search-node-modules"
     ]
 }
 ```
