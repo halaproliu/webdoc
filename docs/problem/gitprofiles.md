@@ -2,7 +2,7 @@
 
 不同的项目使用不同的全局配置，如user.name, user.email
 
-![git-profiles](https://github.com/sudoforge/git-profiles)
+[git-profiles](https://github.com/sudoforge/git-profiles)
 
 
 ### 实现方式
