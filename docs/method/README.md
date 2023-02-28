@@ -14,6 +14,7 @@
 - [深拷贝](/method/deepClone.md)
 - [浅比较](/method/shallowEqual.md)
 - [JavaScript类型判断](/method/type.md)
+- [通过码元实现slice方法](/method/sliceByPoint.md)
 - [实现无限累加函数](/method/add.md)
 - [解析url参数](/method/parseUrl.md)
 - [判断所有值匹配](/method/isAllTrue.md)
