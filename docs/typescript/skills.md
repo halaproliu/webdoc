@@ -109,13 +109,15 @@ type Point = PartialPointX & { y: number };
 **Interface extends type alias**
 
 ```js
-type PartialPointX = { x: number; };interface Point extends PartialPointX { y: number; }
+type PartialPointX = { x: number; };
+interface Point extends PartialPointX { y: number; }
 ```
 
 **Type alias extends interface**
 
 ```js
-interface PartialPointX { x: number; }type Point = PartialPointX & { y: number; };
+interface PartialPointX { x: number; }
+type Point = PartialPointX & { y: number; };
 ```
 
 ___
@@ -145,7 +147,7 @@ const defaultOption: Opt = { timeout: 500 };
 有时候可以反过来：
 
 ```js
-const defaultOption = {  timeout: 500}
+const defaultOption = { timeout: 500 }
 type Opt = typeof defaultOption
 ```
 
@@ -162,7 +164,7 @@ keyof 操作符是在 TypeScript 2.1 版本引入的，该操作符可以用于�
 `keyof` 与 `Object.keys` 略有相似，只不过 `keyof` 取 `interface` 的键。
 
 ```js
-const persion = {  age: 3,  text: 'hello world'}
+const persion = { age: 3, text: 'hello world'}
 // type keys = "age" | "text"type keys = keyof persion;
 ```
 
@@ -190,7 +192,7 @@ const text1 = get1(persion, 'text');
 这时可以使用 `keyof` 来加强 `get` 函数的类型功能，有兴趣的同学可以看看 `_.get` 的 `type` 标记以及实现
 
 ```
-function get<T extends object, K extends keyof T>(o: T, name: K): T[K] {  return o[name]}
+function get<T extends object, K extends keyof T>(o: T, name: K): T[K] { return o[name] }
 ```
 
 ![](../imgs/tskeyget.png)
@@ -244,8 +246,8 @@ const addr: Person["addr"] = {
 
 ```js
 interface API {
-    '/user': { name: string },
-    '/menu': { foods: string[] }
+  '/user': { name: string },
+  '/menu': { foods: string[] }
 }
 const get = <URL extends keyof API>(url: URL): Promise<API[URL]> => {
     return fetch(url).then(res => res.json());
