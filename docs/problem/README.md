@@ -7,3 +7,4 @@
 - [parseInt问题](/problem/parseInt.md)
 - [类数组问题](/problem/arrayLike.md)
 - [代码块](/problem/codeBlock.md)
+- [gitprofiles](/problem/gitprofiles.md)
