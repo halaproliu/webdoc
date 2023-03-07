@@ -95,7 +95,8 @@ ___
 **Interface extends interface**
 
 ```js
-interface PartialPointX { x: number; }interface Point extends PartialPointX { y: number; }
+interface PartialPointX { x: number; }
+interface Point extends PartialPointX { y: number; }
 ```
 
 **Type alias extends type alias**
