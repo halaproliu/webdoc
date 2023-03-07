@@ -47,3 +47,11 @@ function isNative(Ctor) {
   return typeof Ctor === 'function' && /native code/.test(Ctor.toString())
 }
 ```
+
+### 判断是否是有效的日期
+
+```js
+function isValidDate(date) {
+  return date instanceof Date && !isNaN(date.getTime())
+}
+```
