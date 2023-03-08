@@ -1,11 +1,6 @@
 # Typescript实现字典翻译
 
 ```js
-/*
- * @Author: liuwenjian
- * @Date: 2023-02-27 14:15:42
- * @LastEditors: liuwenjian liuwj02@zenmen.com
- */
 import { isMap, isObject } from '@/utils/is';
 interface DictItem {
   value: string;
