@@ -19,4 +19,5 @@
     * [vscode](/vscode/README.md)
     * [shell知识](/shell/README.md)
     * [算法](/algorithm/README.md)
+    * [mac](/mac/README.md)
     * [杂谈](/other/README.md)
