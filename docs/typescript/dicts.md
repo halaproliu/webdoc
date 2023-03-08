@@ -1,6 +1,6 @@
 # Typescript实现字典翻译
 
-```ts
+```js
 /*
  * @Author: liuwenjian
  * @Date: 2023-02-27 14:15:42
