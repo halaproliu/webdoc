@@ -3,3 +3,4 @@
 - [Homebrew安装](/mac/homebrew.md)
 - [重置Mysql密码](/mac/resetmysqlpass.md)
 - [Sequel Pro无法连接mysql8的问题解决](/mac/mysql8.md)
+- [mac保持远程连接长连接](/mac/holdconnect.md)
