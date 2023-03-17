@@ -173,3 +173,45 @@ npm run dev
 ```
 
 以上步骤会使用 TypeScript 编译代码，并使用 ts-node 运行 TypeScript 代码，从而支持在 Koa 中使用 TypeScript。
+
+### 添加eslint支持
+
+1. 安装依赖
+
+```js
+npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
+
+2. 在项目根目录添加.eslintrc.js
+
+```js
+module.exports = {
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+  ],
+  parser: "@typescript-eslint/parser",
+  plugins: ["@typescript-eslint", "prettier"],
+  rules: {
+    "prettier/prettier": "error",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+  },
+};
+
+```
+
+3. 在项目根目录添加.prettierrc.js
+
+```js
+module.exports = {
+  trailingComma: 'es5',
+  tabWidth: 2,
+  semi: true,
+  singleQuote: true,
+};
+
+```
+
+自此eslint+prettier代码规范配置完成。
