@@ -6,8 +6,16 @@
 
 ```js
 mkdir my-project && cd my-project
+
 npm init -y
-npm install koa @koa/router typescript @babel/core @babel/cli @babel/preset-env @babel/preset-typescript @babel/node nodemon --save-dev
+npm install typescript @babel/core @babel/cli @babel/preset-env @babel/preset-typescript @babel/node nodemon --save-dev
+npm install koa @koa/router --save
+
+or
+
+yarn init -y
+yarn add typescript @babel/core @babel/cli @babel/preset-env @babel/preset-typescript @babel/node nodemon -D
+yarn add koa @koa/router
 ```
 
 2. 在项目根目录下创建 tsconfig.json 文件，配置 TypeScript 编译选项：
@@ -180,6 +188,10 @@ npm run dev
 
 ```js
 npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser
+
+or
+
+yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
 2. 在项目根目录添加.eslintrc.js
@@ -215,3 +227,30 @@ module.exports = {
 ```
 
 自此eslint+prettier代码规范配置完成。
+
+### eslint插件不生效
+
+如果是项目eslint配置不在根目录，可以通过如下配置
+
+```js
+// mac
+快捷键command + shift + p -> Preferences: Open Workspace Settings(JSON)
+
+// windows
+快捷键ctrl + shift + p -> Preferences: Open Workspace Settings(JSON)
+```
+
+输入
+
+```js
+{
+  "eslint.workingDirectories": ["项目目录", "项目目录"]
+}
+
+or
+
+// 如项目在packages目录下的server目录
+{
+  "eslint.workingDirectories": [{"pattern": "packages/*"}]
+}
+```
