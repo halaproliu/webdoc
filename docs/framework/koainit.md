@@ -10,9 +10,11 @@ mkdir my-project && cd my-project
 npm init -y
 npm install typescript @babel/core @babel/cli @babel/preset-env @babel/preset-typescript @babel/node nodemon --save-dev
 npm install koa @koa/router --save
+```
 
 or
 
+```js
 yarn init -y
 yarn add typescript @babel/core @babel/cli @babel/preset-env @babel/preset-typescript @babel/node nodemon -D
 yarn add koa @koa/router
@@ -119,6 +121,14 @@ npm init -y
 npm install koa @koa/router typescript ts-node --save-dev
 ```
 
+or
+
+```js
+npm init -y
+yarn add typescript ts-node -D
+yarn add koa @koa/router
+```
+
 2. 在项目根目录下创建 tsconfig.json 文件，配置 TypeScript 编译选项：
 
 
@@ -188,9 +198,11 @@ npm run dev
 
 ```js
 npm i -D eslint prettier eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser
+```
 
 or
 
+```js
 yarn add -D eslint prettier eslint-config-prettier eslint-plugin-prettier @typescript-eslint/eslint-plugin @typescript-eslint/parser
 ```
 
