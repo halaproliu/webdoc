@@ -8,7 +8,7 @@
 mkdir my-project && cd my-project
 
 npm init -y
-npm install typescript @babel/core @babel/cli @babel/preset-env @babel/preset-typescript @babel/node nodemon --save-dev
+npm install typescript @babel/core @babel/cli @babel/preset-env @babel/preset-typescript @babel/node nodemon @types/koa @types/koa__router --save-dev
 npm install koa @koa/router --save
 ```
 
@@ -16,7 +16,7 @@ or
 
 ```js
 yarn init -y
-yarn add typescript @babel/core @babel/cli @babel/preset-env @babel/preset-typescript @babel/node nodemon -D
+yarn add typescript @babel/core @babel/cli @babel/preset-env @babel/preset-typescript @babel/node nodemon @types/koa @types/koa__router -D
 yarn add koa @koa/router
 ```
 
@@ -118,7 +118,8 @@ npm run dev
 ```js
 mkdir my-project && cd my-project
 npm init -y
-npm install koa @koa/router typescript ts-node --save-dev
+npm install typescript ts-node @types/koa @types/koa__router --save-dev
+npm install koa @koa/router
 ```
 
 or
