@@ -8,3 +8,4 @@
 - [类数组问题](/problem/arrayLike.md)
 - [代码块](/problem/codeBlock.md)
 - [gitprofiles](/problem/gitprofiles.md)
+- [nrm问题](/problem/nrm.md)
