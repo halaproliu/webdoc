@@ -8,3 +8,4 @@
 - [any与unknown的区别](/typescript/anyUnknown.md)
 - [Typescript高级用法](/typescript/advancedUsage.md)
 - [Typescript实现字典翻译](/typescript/dicts.md)
+- [Typescript实现Object工具类](/typescript/object.md)
