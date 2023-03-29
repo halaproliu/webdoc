@@ -16,7 +16,7 @@ Instead change the require of index.js in /Users/{username}/Library/Application 
 
 > 原因：应该使用 open 的 CommonJs规范的包 ，现在 open v9.0.0 是 ES Module 版本的包
 
-![](../imgs/nrmquestion.webp)
+![](../imgs/nrmquestion.jpg)
 
 解决方法：npm install -g nrm open@8.4.2 --save
 
