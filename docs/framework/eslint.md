@@ -91,3 +91,14 @@ yarn add -D prettier eslint-config-prettier eslint-plugin-prettier
   "extends": ["plugin:prettier/recommended"]
 }
 ```
+
+### 解决eslint indent冲突
+
+```js
+{
+  rules: {
+    // 设置tabWidth，使prettier的配置和eslint风格统一
+    'prettier/prettier': ['error', { tabWidth: 2 }]
+  }
+}
+```
