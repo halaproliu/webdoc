@@ -19,7 +19,7 @@ npx husky install
 ### 在.husky文件夹下创建commit-msg文件
 
 ```js
-npx husky add .husky/commit-msg
+npx husky add .husky/commit-msg 'npx --no -- commitlint --edit $1'
 ```
 
 ### 安装git 提交信息规范配置文件
@@ -37,6 +37,11 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']};"> commitl
 ### package.json添加配置
 
 ```js
+"script": {
+  "prepare": "husky install",
+  "postinstall": "husky install",
+  "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx --fix --quiet ./"
+},
 "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
@@ -45,7 +50,7 @@ echo "module.exports = {extends: ['@commitlint/config-conventional']};"> commitl
   },
   "lint-staged": {
     "src/**/*.{ts,tsx,js,vue}": [
-      "npm run lint:nofix --production"
+      "npm run lint:fix --production"
     ]
   }
 ```
