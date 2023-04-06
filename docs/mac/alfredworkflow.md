@@ -13,21 +13,21 @@
 
 1. 在workflow中创建一个空白的workflow
 
-![](../imgs/alfred/img_9fbb730e733ddaceaf2b07416f2bcfe9.png)
+![](../imgs/alfred/img_9fbb730e733ddaceaf2b07416f2bcfe9.png ':size=500')
 
-![](../imgs/alfred/Snipaste_2023-04-06_14-05-54.png)
+![](../imgs/alfred/Snipaste_2023-04-06_14-05-54.png ':size=500')
 
 2. 选择一个input keyword
 
-![](../imgs/alfred/Snipaste_2023-04-06_14-07-54.png)
+![](../imgs/alfred/Snipaste_2023-04-06_14-07-54.png ':size=500')
 
-![](../imgs/alfred/Snipaste_2023-04-06_14-08-47.png)
+![](../imgs/alfred/Snipaste_2023-04-06_14-08-47.png ':size=500')
 
 3. 添加一个Actions -> Run Script
 
-![](../imgs/alfred/Snipaste_2023-04-06_14-09-37.png)
+![](../imgs/alfred/Snipaste_2023-04-06_14-09-37.png ':size=500')
 
-![](../imgs/alfred/img_c552eba47e6f732f1979158c2551df62.png)
+![](../imgs/alfred/img_c552eba47e6f732f1979158c2551df62.png ':size=500')
 
 其中zhoubao.py存放目录的路径基本在~/Library/Application\ Support/Alfred/Alfred.alfredpreferences/workflows/user.workflow.xxxxxxxxxxxxx这样一个目录地址下。
 
@@ -84,18 +84,18 @@ pip install datetime target=.
 
 勾选Automatically paste to frontmost app，会自动将workflow获得的结果自动黏贴到当前窗口输入光标下的，无论是什么app。
 
-![](../imgs/alfred/Snipaste_2023-04-06_14-17-42.png)
+![](../imgs/alfred/Snipaste_2023-04-06_14-17-42.png ':size=500')
 
-![](../imgs/alfred/Snipaste_2023-04-06_14-18-00.png)
+![](../imgs/alfred/Snipaste_2023-04-06_14-18-00.png ':size=500')
 
 7. 对三个组件进行连线,使整个workflow连接起来形成一个工作流
 
-![](../imgs/alfred/Snipaste_2023-04-06_14-18-24.png)
+![](../imgs/alfred/Snipaste_2023-04-06_14-18-24.png ':size=500')
 
 至此这个周报组件就完成了。
 
 8. 插件的使用
 
-![](../imgs/alfred/Snipaste_2023-04-06_14-26-39.png)
+![](../imgs/alfred/Snipaste_2023-04-06_14-26-39.png ':size=500')
 
 ![](../imgs/alfred/screen2023-04-06-14.28.27.mp4)
