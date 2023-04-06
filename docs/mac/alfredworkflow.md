@@ -98,4 +98,4 @@ pip install datetime target=.
 
 ![](../imgs/alfred/Snipaste_2023-04-06_14-26-39.png)
 
-![](../imgs/alfred/screen2023-04-06%2014.28.27.mov")
+![](../imgs/alfred/screen2023-04-06-14.28.27.mp4)
