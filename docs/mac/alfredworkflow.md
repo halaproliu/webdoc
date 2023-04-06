@@ -98,8 +98,4 @@ pip install datetime target=.
 
 ![](../imgs/alfred/Snipaste_2023-04-06_14-26-39.png)
 
-![](../imgs/alfred/screen2023-04-06%2014.28.27.mov" type="video/mp4)
-
-<video width="420" height="240" controls>
-  <source src="../imgs/alfred/screen2023-04-06%2014.28.27.mov" type="video/mp4">
-</video>
+![](../imgs/alfred/screen2023-04-06%2014.28.27.mov")
