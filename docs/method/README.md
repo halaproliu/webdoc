@@ -36,6 +36,7 @@
 - [JS实现面向切面编程](/method/aop.md)
 - [日期格式化](/method/date.md)
 - [判断是否是utf-8数据](/method/isUTF8.md)
+- [JS实现判断文件是否是UTF8编码](/method/isUTF8File.md)
 - [使用sheetjs操作xlsx](/method/uploadCsv.md)
 - [JavaScript实现在线查看zip文件](/method/zip.md)
 - [contenteditable兼容问题解决方案](/method/contenteditable.md)
