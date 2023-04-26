@@ -19,4 +19,4 @@
 - [从 0 构建自己的脚手架CLI知识体系（万字）](/framework/cli.md)
 - [要进大厂？前端灰度发布必须要知道](/framework/grayrealease.md)
 - [搭建Koa+TypeScript服务端项目](/framework/koainit.md)
-- [gitlab创建前端脚手架](/framework/gitlbacli.md)
+- [gitlab创建前端脚手架](/framework/gitlabcli.md)
