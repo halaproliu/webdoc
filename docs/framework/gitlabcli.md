@@ -59,7 +59,7 @@ program.parse(process.argv)
 ### 生成器
 
 ```js
-// src/lib/Generator.js
+// lib/Generator.js
 import util from 'util'
 import path from 'path'
 import chalk from 'chalk'
@@ -71,14 +71,21 @@ import * as config from './config/index.js'
 
 // 添加加载动画
 async function wrapLoading(fn, message, ...args) {
+  
+  
   // 使用 ora 初始化，传入提示信息 message
   const spinner = ora(message);
   // 开始加载动画
   spinner.start();
+  let result;
 
   try {
     // 执行传入方法 fn
-    const result = await fn(...args);
+    if (Array.isArray(fn)) {
+      result = await Promise.all(fn.map(item => item(...args)));
+    } else {
+      result = await fn(...args);
+    }
     // 状态为修改为成功
     spinner.succeed();
     return result; 
@@ -167,13 +174,37 @@ class Generator {
     return branch
   }
 
+  async getTagAndBranch(id) {
+    const result = await wrapLoading([getTagList, getBranchesList], 'waiting fetch branch and tag', id);
+    if (!result) return;
+    
+    const [tagList = [], branchList = []] = result;
+    const resultList = []
+    for (let item of branchList) {
+      resultList.push(item.name)
+    }
+    for (let item of tagList) {
+      resultList.push(item.name)
+    }
+
+    
+    // 2) 用户选择自己需要下载的branch和tag
+    const { branchOrTag } = await inquirer.prompt({
+      name: 'branch and tag',
+      type: 'list',
+      choices: resultList,
+      message: 'Place choose a branch or tag to create project'
+    })
+    return branchOrTag
+  }
+
     // 下载远程模板
   // 1）拼接下载地址
   // 2）调用下载方法
-  async download(repo, branch){
+  async download(repo, tagOrBranch){
 
     // 1）拼接下载地址
-    const requestUrl = `direct:${config.origin}/api/v4/projects/${repo.id}/repository/archive${branch ? `?sha=${branch}`: ''}`;
+    const requestUrl = `direct:${config.origin}/api/v4/projects/${repo.id}/repository/archive${tagOrBranch ? `?sha=${tagOrBranch}`: ''}`;
     
     // 2）调用下载方法
     await wrapLoading(
@@ -201,18 +232,16 @@ class Generator {
 
     // 2) 获取 tag 名称
     // const tag = await this.getTag(id)
-    const branch = await this.getBranch(id)
+    const branch = await this.getTagAndBranch(id)
 
     // 3）下载模板到模板目录
     await this.download(repoItem, branch)
 
-    
-    
-    
   }
 }
 
 export default Generator;
+
 ```
 
 ### 创建
@@ -374,6 +403,46 @@ export async function getTagList(id) {
  */
 export async function getBranchesList(id) {
   return service.get(`/projects/${id}/repository/branches`);
+}
+```
+
+### package.json
+
+```js
+{
+  "name": "react-cli",
+  "version": "1.0.0",
+  "description": "react cli",
+  "bin": {
+    "react-cli": "src/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "babel src -d dist"
+  },
+  "keywords": [
+    "react",
+    "cli"
+  ],
+  "author": "halapro.liu",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.18.6",
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "@babel/register": "^7.18.6"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "chalk": "^5.2.0",
+    "commander": "^10.0.1",
+    "download-git-repo": "^3.0.2",
+    "ejs": "^3.1.8",
+    "figlet": "^1.6.0",
+    "fs-extra": "^10.1.0",
+    "inquirer": "^9.2.0",
+    "ora": "^6.3.0"
+  }
 }
 ```
 
