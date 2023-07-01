@@ -2,6 +2,12 @@
 
 ### curry 函数定义 TS
 
+分为三种情况：
+
+-   没有参数
+-   一个参数
+-   多个参数
+
 ```ts
 type Curried<A, R> = A extends []
     ? () => R
