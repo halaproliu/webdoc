@@ -1,5 +1,8 @@
 # React Hooks实现预览pdf
 
+
+### 方法一
+
 ```js
 import {
   useState,
@@ -266,4 +269,125 @@ const PdfViewers = forwardRef(
 PdfViewers.displayName = 'PdfViewers';
 
 export default PdfViewers;
+```
+
+### 方法二
+
+```js
+import { useEffect, useRef, useState, RefObject } from 'react';
+import { PdfViewerProps } from './types';
+import styles from './style/index.module.less';
+
+const PdfViewers = (props: PdfViewerProps) => {
+  const { url, style = {} } = props;
+  const pdfRef: RefObject<HTMLCanvasElement[]> = useRef<HTMLCanvasElement[]>(
+    []
+  );
+  const [pdfDocument, setPdfDocument] = useState<any>(null);
+  const [pages, setPages] = useState<number[]>([]);
+  const [numPages, setNumPages] = useState<number>(0);
+  const [scale] = useState(1);
+  const [containerStyle, setContainerStyle] = useState({});
+
+  const getDocument = async (url: string) => {
+    const loadingMask = window.pdfjsLib.getDocument(url);
+    const pdfDocument = await loadingMask.promise;
+    setPdfDocument(pdfDocument);
+    setNumPages(pdfDocument.numPages);
+    setPages([...Array(pdfDocument.numPages)].map((item, index) => index + 1));
+  };
+
+  const getPage = async (num: number) => {
+    const page = await pdfDocument.getPage(num);
+    const outputScale = window.devicePixelRatio || 1;
+    const clientWidth = document.body.clientWidth;
+    const viewport = page.getViewport({ scale: scale });
+    const realScale = clientWidth / viewport.width;
+    const scaledViewport = page.getViewport({ scale: realScale });
+    const allHeight =
+      Math.floor(scaledViewport.height * outputScale) +
+      Math.floor(scaledViewport.width * outputScale) -
+      40 +
+      'px';
+    setContainerStyle({
+      height: allHeight
+    });
+    const canvas = pdfRef.current?.[num];
+    if (canvas) {
+      const ctx = canvas.getContext('2d');
+      canvas.width = Math.floor(scaledViewport.width * outputScale);
+      canvas.height = Math.floor(scaledViewport.height * outputScale);
+      canvas.style.width = Math.floor(scaledViewport.width) + 'px';
+      canvas.style.height = Math.floor(scaledViewport.height) + 'px';
+      canvas.dataset.pagenumber = num.toString();
+      canvas.dataset.scale = realScale.toString();
+      const transform =
+        outputScale !== 1 ? [outputScale, 0, 0, outputScale, 0, 0] : null;
+      const renderContext = {
+        canvasContext: ctx,
+        transform: transform,
+        viewport: scaledViewport
+      };
+      page.render(renderContext);
+      if (numPages > num) {
+        getPage(num + 1);
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (window.pdfjsLib && url) {
+      getDocument(url);
+    }
+  }, [url]);
+
+  useEffect(() => {
+    if (pdfDocument) {
+      getPage(1);
+    }
+  }, [pdfDocument]);
+
+  return (
+    <div
+      className={styles.container}
+      style={{ ...containerStyle, ...style, marginTop: 40 }}>
+      {pages.map((index) => {
+        return (
+          <canvas
+            ref={(ref) => {
+              if (pdfRef.current) {
+                pdfRef.current[index] = ref as HTMLCanvasElement;
+              }
+            }}
+            key={index}
+          />
+        );
+      })}
+    </div>
+  );
+};
+
+export default PdfViewers;
+
+```
+
+```css
+.container {
+  width: 100%;
+  height: fit-content;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.viewer {
+  margin: auto;
+}
+
+.pdf-viewer {
+  &.removePageBorders {
+    .page {
+      margin-bottom: 0;
+    }
+  }
+}
 ```
