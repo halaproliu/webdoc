@@ -1,7 +1,5 @@
 ## mac 配置 clashx 代理忽略列表
 
-发表于 2020-05-29 | 分类于 [other](https://wonderlq.github.io/categories/other/) | 阅读次数:
-
 安装好 clashx 之后，内网网站打不开，需要代理配置忽略，但是 mac 没有找到可视化操作界面。
 
 按照官方文档，操作如下：
