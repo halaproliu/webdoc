@@ -23,7 +23,7 @@
   <link rel="stylesheet" href="./_css/common.css">
   <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
   <link href="./_css/fonts.css"rel="stylesheet">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
+  <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/gitalk/dist/gitalk.css">
   <!-- 代码高亮的样式 -->
   <!-- <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet" /> -->
 
@@ -64,36 +64,38 @@
     }
   </script>
   <!-- Docsify v4 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+  <script src="//fastly.jsdelivr.net/npm/docsify@4"></script>
   <!-- preview code -->
-  <script crossorigin src="https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script>
-  <script crossorigin src="https://cdn.jsdelivr.net/npm/react-dom@18.2.0/index.min.js"></script>
+  <!-- <script crossorigin src="https://fastly.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script> -->
+  <!-- <script crossorigin src="https://fastly.jsdelivr.net/npm/react-dom@18.2.0/index.min.js"></script> -->
+  <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
   <!-- <script src="https://unpkg.com/docsify-demo-box-react@1.1.0/dist/docsify-demo-box-react.min.js"></script> -->
   <script src="./_js/docsify-demo-box-react.min.js"></script>
   <!-- 复制代码 -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2.1.1/dist/docsify-copy-code.min.js"></script>
+  <script src="https://unpkg.com/docsify-copy-code@2.1.1/dist/docsify-copy-code.min.js"></script>
   <!-- 代码高亮 -->
-  <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
   <!-- 核心的JS库 -->
   <!-- <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script> -->
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
   <!-- 底部 上一页下一页 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
   <!-- 全文搜索 -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <!-- 外链script -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
   <!-- 图片放大缩小 -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
   <!-- 多tab支持 -->
-  <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
+  <script src="https://fastly.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
   <!-- emoji -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
   <!-- gif control -->
   <!-- <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script> -->
   <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//fastly.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
 
   <script>
     const gitalk = new Gitalk({
