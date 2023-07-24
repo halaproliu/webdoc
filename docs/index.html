@@ -1,113 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>前端知识体系</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Description">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  <meta name="google-site-verification" content="SrCe8u0CFAEqKdFiyTW_tbWoHcumDbc-NmEKYVvPEnk" />
-  <meta name="google-site-verification" content="e3G9RAX4RlFQRxsKCcLH-wG2XwuAWIRGJDz5fASHmJY" />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9003K88KRL"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <head>
+        <meta charset="UTF-8" />
+        <title>前端知识体系</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="description" content="Description" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+        />
+        <meta
+            name="google-site-verification"
+            content="SrCe8u0CFAEqKdFiyTW_tbWoHcumDbc-NmEKYVvPEnk"
+        />
+        <meta
+            name="google-site-verification"
+            content="e3G9RAX4RlFQRxsKCcLH-wG2XwuAWIRGJDz5fASHmJY"
+        />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-9003K88KRL"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-    gtag('config', 'G-9003K88KRL');
-  </script>
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
-  <link rel="stylesheet" href="./_css/vue.css">
-  <!-- <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css"> -->
-  <link rel="stylesheet" href="./_css/common.css">
-  <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
-  <link href="./_css/fonts.css"rel="stylesheet">
-  <link rel="stylesheet" href="//fastly.jsdelivr.net/npm/gitalk/dist/gitalk.css">
-  <!-- 代码高亮的样式 -->
-  <!-- <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet" /> -->
+            gtag('config', 'G-9003K88KRL');
+        </script>
+        <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css"> -->
+        <link rel="stylesheet" href="./_css/vue.css" />
+        <!-- <link rel="stylesheet" href="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.css"> -->
+        <link rel="stylesheet" href="./_css/common.css" />
+        <!-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" /> -->
+        <link href="./_css/fonts.css" rel="stylesheet" />
+        <link
+            href="https://cdn.bootcdn.net/ajax/libs/gitalk/1.8.0/gitalk.min.css"
+            rel="stylesheet"
+        />
+        />
+        <!-- 代码高亮的样式 -->
+        <!-- <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet" /> -->
 
-  <style>
-    .docsify-tabs__tab {
-        outline: none;
-    }
-  </style>
-</head>
-<body>
-  <div id="app"></div>
-  <script>
-    window.$docsify = {
-      name: '前端知识体系',
-      repo: 'https://github.com/halaproliu',
-      loadSidebar: true,
-      subMaxLevel: 3,
-      sidebarDisplayLevel: 1,
-      coverpage: true,
-      externalLinkTarget: '_blank',
-      pagination: {
-        previousText: '上一章节',
-        nextText: '下一章节',
-      },
-      search: {
-        placeholder: '搜索',
-        noData: '找不到结果!',
-        depth: 3
-      },
-      tabs: {
-        theme: 'classic'
-      },
-      themeable: {
-        readyTransition : true, // default
-        responsiveTables: true  // default
-      }
-      // disqus: 'halaproliu'
-    }
-  </script>
-  <!-- Docsify v4 -->
-  <script src="//fastly.jsdelivr.net/npm/docsify@4"></script>
-  <!-- preview code -->
-  <!-- <script crossorigin src="https://fastly.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script> -->
-  <!-- <script crossorigin src="https://fastly.jsdelivr.net/npm/react-dom@18.2.0/index.min.js"></script> -->
-  <script crossorigin src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
-  <!-- <script src="https://unpkg.com/docsify-demo-box-react@1.1.0/dist/docsify-demo-box-react.min.js"></script> -->
-  <script src="./_js/docsify-demo-box-react.min.js"></script>
-  <!-- 复制代码 -->
-  <script src="https://unpkg.com/docsify-copy-code@2.1.1/dist/docsify-copy-code.min.js"></script>
-  <!-- 代码高亮 -->
-  <script src="//fastly.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
-  <!-- 核心的JS库 -->
-  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script> -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
-  <!-- 底部 上一页下一页 -->
-  <script src="//fastly.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
-  <!-- 全文搜索 -->
-  <script src="//fastly.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <!-- 外链script -->
-  <script src="//fastly.jsdelivr.net/npm/docsify/lib/plugins/external-script.min.js"></script>
-  <!-- 图片放大缩小 -->
-  <script src="https://fastly.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-  <!-- 多tab支持 -->
-  <script src="https://fastly.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
-  <!-- emoji -->
-  <script src="//fastly.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
-  <!-- gif control -->
-  <!-- <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script> -->
-  <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
-  <script src="//fastly.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
-  <script src="//fastly.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+        <style>
+            .docsify-tabs__tab {
+                outline: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+        <script>
+            window.$docsify = {
+                name: '前端知识体系',
+                repo: 'https://github.com/halaproliu',
+                loadSidebar: true,
+                subMaxLevel: 3,
+                sidebarDisplayLevel: 1,
+                coverpage: true,
+                externalLinkTarget: '_blank',
+                pagination: {
+                    previousText: '上一章节',
+                    nextText: '下一章节'
+                },
+                search: {
+                    placeholder: '搜索',
+                    noData: '找不到结果!',
+                    depth: 3
+                },
+                tabs: {
+                    theme: 'classic'
+                },
+                themeable: {
+                    readyTransition: true, // default
+                    responsiveTables: true // default
+                }
+                // disqus: 'halaproliu'
+            };
+        </script>
+        <!-- Docsify v4 -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/docsify/4.13.0/docsify.js"></script>
+        <!-- preview code -->
+        <!-- <script crossorigin src="https://fastly.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js"></script> -->
+        <!-- <script crossorigin src="https://fastly.jsdelivr.net/npm/react-dom@18.2.0/index.min.js"></script> -->
+        <script
+            crossorigin
+            src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"
+        ></script>
+        <script
+            crossorigin
+            src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"
+        ></script>
+        <!-- <script src="https://unpkg.com/docsify-demo-box-react@1.1.0/dist/docsify-demo-box-react.min.js"></script> -->
+        <script src="./_js/docsify-demo-box-react.min.js"></script>
+        <!-- 复制代码 -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/docsify-copy-code/2.1.1/docsify-copy-code.min.js"></script>
+        <!-- 代码高亮 -->
+        <script src="https://cdn.bootcdn.net/ajax/libs/prism/9000.0.1/components/prism-bash.min.js"></script>
+        <!-- 核心的JS库 -->
+        <!-- <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/11.0.1/highlight.min.js"></script> -->
+        <!-- <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
+        <!-- 底部 上一页下一页 -->
+        <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+        <!-- 全文搜索 -->
+        <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+        <!-- 外链script -->
+        <script src="//unpkg.com/docsify/lib/plugins/external-script.min.js"></script>
+        <!-- 图片放大缩小 -->
+        <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+        <!-- 多tab支持 -->
+        <script src="//unpkg.com/docsify-tabs@1.6.0/dist/docsify-tabs.min.js"></script>
+        <!-- emoji -->
+        <script src="//unpkg.com/docsify/lib/plugins/emoji.min.js"></script>
+        <!-- gif control -->
+        <!-- <script src="//unpkg.com/docsify-gifcontrol/dist/docsify-gifcontrol.js"></script> -->
+        <!-- <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/disqus.min.js"></script> -->
+        <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+        <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-  <script>
-    const gitalk = new Gitalk({
-      id: decodeURI(location.pathname),
-      clientID: '5600aa8d34021dc4a1f2',
-      clientSecret: 'ac4d2cc35db1abc4dd47ea21698224cdbeb23f65',
-      repo: 'halaproliu.github.io',
-      owner: 'halaproliu',
-      admin: ['halaproliu'],
-      // facebook-like distraction free mode
-      distractionFreeMode: false
-    })
-  </script>
-</body>
+        <script>
+            const gitalk = new Gitalk({
+                id: decodeURI(location.pathname),
+                clientID: '5600aa8d34021dc4a1f2',
+                clientSecret: 'ac4d2cc35db1abc4dd47ea21698224cdbeb23f65',
+                repo: 'halaproliu.github.io',
+                owner: 'halaproliu',
+                admin: ['halaproliu'],
+                // facebook-like distraction free mode
+                distractionFreeMode: false
+            });
+        </script>
+    </body>
 </html>
