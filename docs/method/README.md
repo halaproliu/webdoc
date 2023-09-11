@@ -50,3 +50,4 @@
 - [vue中批量生成computed属性](/method/mapComputed.md)
 - [JavaScript实现Cookie操作](/method/cookie.md)
 - [Ajax方法入参处理](/method/setAjaxOptions.md)
+- [Axios实现取消重复请求](/method/axiosCancel.md)
