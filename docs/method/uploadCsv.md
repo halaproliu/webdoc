@@ -102,3 +102,28 @@ export const writeXLSX = (data, filename) => {
   window.XLSX.writeFile(wb, filename)
 }
 ```
+
+```js
+/**
+ * @description: 导出数据到excel
+ * @param {Array} data 导出的数据
+ * @param {String} filename 导出的文件名
+ * @return {*}
+ **/
+export const writeXLSX = (
+  data: Record<string, string>[],
+  filename: string,
+  header?: string[]
+) => {
+  // 生成worksheet和workbook
+  const ws = utils.json_to_sheet(data);
+  /* create workbook */
+  const wb = utils.book_new();
+  utils.book_append_sheet(wb, ws, 'sheet1');
+  // fix headers
+  utils.sheet_add_aoa(ws, [header as string[]], { origin: 'A1' });
+  ws['!cols'] = [{ wch: 10 }];
+  // const wb = { SheetNames: ['sheet1'], Sheets: { sheet1: ws } };
+  writeFile(wb, filename);
+};
+```
