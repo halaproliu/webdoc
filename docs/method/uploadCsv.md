@@ -87,6 +87,41 @@ async function getData (file) {
 }
 ```
 
+```typescript
+export async function getData(file: File, columns: GenericObject[]) {
+  let out: Record<string, GenericObject> = {}
+  let headers: Record<string, GenericObject> = {}
+  // 读取文件数据
+  let e = await readFile(file, 'arrayBuffer')
+  let bytes: any = e.target?.result
+  // // 读取excel数据
+  let workbook = read(bytes, { type: 'binary', codepage: 936 })
+  // // 读取所有sheet数据
+  workbook.SheetNames.forEach((n: string) => {
+    const ws = workbook.Sheets[n]
+    out[n] = utils.sheet_to_json(ws)
+    // 以横向方式读取数据，第一行为标题数组
+    // headers[n] = utils.sheet_to_json(ws, { header: 1, raw: true })
+    headers[n] = getHeaderRow(ws)
+    out[n] = out[n].map((item: GenericObject) => {
+      return Object.keys(item).reduce((prev, key) => {
+        const realKey = columns.find((col) => col.title === key)?.dataIndex
+        prev[realKey] = item[key]
+        return prev
+      }, {} as GenericObject)
+    })
+  })
+  // 获取第一个sheet的数据
+  let sheetName = workbook.SheetNames[0]
+  let arr = out[sheetName] // 所有数据
+  let firstHeader = headers[sheetName]
+  return {
+    header: firstHeader,
+    data: arr
+  }
+}
+```
+
 ### 导出excel
 
 ```js
