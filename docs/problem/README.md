@@ -10,3 +10,4 @@
 - [gitprofiles](/problem/gitprofiles.md)
 - [nrm问题](/problem/nrm.md)
 - [npm安装不成功问题](/problem/npmproblem.md)
+- [figma问题](/problem/figma.md)
