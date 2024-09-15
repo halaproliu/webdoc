@@ -10,4 +10,5 @@
 -   [Typescript 实现字典翻译](/typescript/dicts.md)
 -   [Typescript 实现 Object 工具类](/typescript/object.md)
 -   [柯里化 TS 定义](/typescript/curry.md)
--   [FormData类型](/typescript/formData.md)
+-   [FormData 类型](/typescript/formData.md)
+-   [TypeScript 处理 catch 代码块中的错误信息](/typescript/catch.md)
