@@ -8,6 +8,6 @@ const curry = fn => {
     args.length === fn.length ?
     fn(...args) :
     arg => generator([...args, arg]);
-  return generator([], fn.length);
+  return generator([]);
 };
 ```
