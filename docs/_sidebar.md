@@ -21,5 +21,6 @@
     -   [shell 知识](/shell/README.md)
     -   [python](/python/README.md)
     -   [算法](/algorithm/README.md)
+    -   [node](/node/README.md)
     -   [mac](/mac/README.md)
     -   [杂谈](/other/README.md)
