@@ -20,5 +20,8 @@
   * [面试题](https://halaproliu.github.io/webdoc/#/interview/README.md)
   * [前端问题集](https://halaproliu.github.io/webdoc/#/problem/README.md)
   * [shell知识](https://halaproliu.github.io/webdoc/#/shell/README.md)
+  * [python](https://halaproliu.github.io/webdoc/#/python/README.md)
   * [算法](https://halaproliu.github.io/webdoc/#/algorithm/README.md)
+  * [node](https://halaproliu.github.io/webdoc/#/node/README.md)
+  * [mac](https://halaproliu.github.io/webdoc/#/mac/README.md)
   * [杂谈](https://halaproliu.github.io/webdoc/#/other/README.md)
