@@ -32,9 +32,6 @@ const readFiles = (currPath, files = []) => {
 const replaceContent = files => {
   for (let currPath of files) {
     console.log(currPath)
-    if (/vocust\\hotelcem-frontend\\src\\apis\\index.js/.test(currPath)) {
-      continue
-    }
     const file = fs.readFileSync(currPath, 'utf8')
     let result = handleContent(file)
     fs.writeFileSync(currPath, result)
