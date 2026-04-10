@@ -25,3 +25,4 @@
     -   [mac](/mac/README.md)
     -   [杂谈](/other/README.md)
     -   [git](/git/README.md)
+    -   [AI](/ai/README.md)
