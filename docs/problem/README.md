@@ -10,3 +10,5 @@
 - [nrm问题](/problem/nrm.md)
 - [npm安装不成功问题](/problem/npmproblem.md)
 - [figma问题](/problem/figma.md)
+- [sass问题](/problem/sass.md)
+- [babel7问题](/problem/babel.md)
